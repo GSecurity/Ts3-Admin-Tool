@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ts_Manager_Beta", "Ts_Manager_Beta\Ts_Manager_Beta.csproj", "{FA5A548C-EBE5-4DA4-AF6F-42EC8931850C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA5A548C-EBE5-4DA4-AF6F-42EC8931850C}.Debug|x86.ActiveCfg = Release|x86
+		{FA5A548C-EBE5-4DA4-AF6F-42EC8931850C}.Debug|x86.Build.0 = Release|x86
+		{FA5A548C-EBE5-4DA4-AF6F-42EC8931850C}.Release|x86.ActiveCfg = Release|x86
+		{FA5A548C-EBE5-4DA4-AF6F-42EC8931850C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
