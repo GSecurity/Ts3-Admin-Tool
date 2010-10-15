@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\GSecurity\Documents\Visual Studio 2010\publish\|publish\|http://ts3admintool.codeplex.com/|http://ts3admintool.codeplex.com/releases/clickonce/|ftp.gsecurity.ch/ts3admin/</PublishUrlHistory>
+    <InstallUrlHistory>http://ts3admintool.codeplex.com/releases/clickonce/|http://www.gsecurity.ch/ts3admin/</InstallUrlHistory>
+    <SupportUrlHistory>http://www.swissteamspeak.com</SupportUrlHistory>
+    <UpdateUrlHistory>http://www.gsecurity.ch/ts3admin/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory>http://ts3admintool.codeplex.com/workitem/list/basic</ErrorReportUrlHistory>
+    <FallbackCulture>fr-FR</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>
