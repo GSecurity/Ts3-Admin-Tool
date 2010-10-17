@@ -570,20 +570,6 @@ namespace Ts_Manager_Beta
                                     txtBoxServerEditTransfersDownldBandwthLimit.Text = serverinfo.MaxDownloadTotalBandwidth.ToString();
                                     // Get The Server Download Quota And Put It In The Server Download Quota Edit TextBox
                                     txtBoxServerEditTransfersDownldQuota.Text = serverinfo.DownloadQuota.ToString();
-                                    // Get The Server Password And Put It In The Server Password Edit TextBox
-                                    //
-                                    // If The Server Password Is Empty (In This Case The "Empty" Value Is "null")
-                                    if (serverinfo.PasswordHash == null)
-                                    {
-                                        // Then Put An Empty String Value In The Server New Password Edit TextBox
-                                        txtBoxServerEditServerPasswordNewPassword.Text = "";
-                                    }
-                                    else // Else
-                                    {
-                                        // Put The Value Of The Server Password And Put It In The Server New Password Edit TextBox
-                                        txtBoxServerEditServerPasswordNewPassword.Text = serverinfo.PasswordHash.ToString();
-                                    }
-
                                     // Get The AutoStart Value And Put It In The AutoStart Edit TextBox
                                     txtBoxServerEditAutoStart.Text = serverinfo.AutoStart.ToString();
 
@@ -697,8 +683,18 @@ namespace Ts_Manager_Beta
                             // Get The Value Of The Server Min. Number Client In Channel Before Force Silence Edit TextBox,
                             // Convert It Into "Int32", And Store It In ServEdit
                             ServEdit.MinClientsInChannelBeforeForcedSilence = Convert.ToInt32(txtBoxServerEditVirtServMinNbClInChnlToFrceSilce.Text);
-                            // Get The Value Of The Server Name Edit TextBox And Store It In ServEdit
-                            ServEdit.Name = txtBoxServerEditVirtServName.Text;
+                            
+                            // If The Server Name Edit TextBox Is Empty
+                            if (txtBoxServerEditVirtServName.Text == "")
+                            {
+                                // Show A MessageBox With Warning Message
+                                MessageBox.Show("The Server Name Is Empty !\r\nBe Advised That The Server Name Will NOT Be Changed");
+                            }
+                            else
+                            {
+                                // Get The Value Of The Server Name Edit TextBox And Store It In ServEdit
+                                ServEdit.Name = txtBoxServerEditVirtServName.Text;
+                            }
                             // Get The Value Of The Server Port Edit TextBox, Convert It Into "ushort", And Store It In ServEdit
                             ServEdit.Port = ushort.Parse(txtBoxServerVirtServEditPort.Text);
                             // Get The Value Of The Server Identity Security Level, Convert It Into "Int32", And Store It In ServEdit
