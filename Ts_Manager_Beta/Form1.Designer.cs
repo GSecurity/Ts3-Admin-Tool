@@ -99,7 +99,6 @@
             this.lblServerEditHostBnrInter = new System.Windows.Forms.Label();
             this.lblServerEditHostUrl = new System.Windows.Forms.Label();
             this.lblServerEditHostBnrUrl = new System.Windows.Forms.Label();
-            this.lstBoxServerEditAutoStart = new System.Windows.Forms.ListBox();
             this.rdBtnServerEditShowMsgInLog = new System.Windows.Forms.RadioButton();
             this.rdBtnServerEditModalMsgAndExit = new System.Windows.Forms.RadioButton();
             this.rdBtnServerEditShowModalMsg = new System.Windows.Forms.RadioButton();
@@ -148,11 +147,10 @@
             this.txtBoxServerVirtServEditPort = new System.Windows.Forms.TextBox();
             this.lblServerEditVirtServPort = new System.Windows.Forms.Label();
             this.lblServerEditAutoStart = new System.Windows.Forms.Label();
-            this.rdBtnServerEditAutoStartNo = new System.Windows.Forms.RadioButton();
-            this.rdBtnServerEditAutoStartYes = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.txtBoxServerEditAutoStart = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -641,6 +639,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage2.Controls.Add(this.txtBoxServerEditAutoStart);
             this.tabPage2.Controls.Add(this.lblServerEditServerPasswordNewPassword);
             this.tabPage2.Controls.Add(this.lblServerEditServerPassword);
             this.tabPage2.Controls.Add(this.txtBoxServerEditServerPasswordNewPassword);
@@ -667,7 +666,6 @@
             this.tabPage2.Controls.Add(this.lblServerEditHostBnrInter);
             this.tabPage2.Controls.Add(this.lblServerEditHostUrl);
             this.tabPage2.Controls.Add(this.lblServerEditHostBnrUrl);
-            this.tabPage2.Controls.Add(this.lstBoxServerEditAutoStart);
             this.tabPage2.Controls.Add(this.rdBtnServerEditShowMsgInLog);
             this.tabPage2.Controls.Add(this.rdBtnServerEditModalMsgAndExit);
             this.tabPage2.Controls.Add(this.rdBtnServerEditShowModalMsg);
@@ -716,8 +714,6 @@
             this.tabPage2.Controls.Add(this.txtBoxServerVirtServEditPort);
             this.tabPage2.Controls.Add(this.lblServerEditVirtServPort);
             this.tabPage2.Controls.Add(this.lblServerEditAutoStart);
-            this.tabPage2.Controls.Add(this.rdBtnServerEditAutoStartNo);
-            this.tabPage2.Controls.Add(this.rdBtnServerEditAutoStartYes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -964,18 +960,6 @@
             this.lblServerEditHostBnrUrl.Size = new System.Drawing.Size(88, 13);
             this.lblServerEditHostBnrUrl.TabIndex = 52;
             this.lblServerEditHostBnrUrl.Text = "Host Banner Url :";
-            // 
-            // lstBoxServerEditAutoStart
-            // 
-            this.lstBoxServerEditAutoStart.FormattingEnabled = true;
-            this.lstBoxServerEditAutoStart.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.lstBoxServerEditAutoStart.Location = new System.Drawing.Point(822, 10);
-            this.lstBoxServerEditAutoStart.Name = "lstBoxServerEditAutoStart";
-            this.lstBoxServerEditAutoStart.Size = new System.Drawing.Size(40, 30);
-            this.lstBoxServerEditAutoStart.TabIndex = 51;
-            this.lstBoxServerEditAutoStart.Visible = false;
             // 
             // rdBtnServerEditShowMsgInLog
             // 
@@ -1379,38 +1363,11 @@
             // lblServerEditAutoStart
             // 
             this.lblServerEditAutoStart.AutoSize = true;
-            this.lblServerEditAutoStart.Location = new System.Drawing.Point(780, 13);
+            this.lblServerEditAutoStart.Location = new System.Drawing.Point(619, 368);
             this.lblServerEditAutoStart.Name = "lblServerEditAutoStart";
-            this.lblServerEditAutoStart.Size = new System.Drawing.Size(57, 13);
+            this.lblServerEditAutoStart.Size = new System.Drawing.Size(128, 13);
             this.lblServerEditAutoStart.TabIndex = 2;
-            this.lblServerEditAutoStart.Text = "AutoStart :";
-            this.lblServerEditAutoStart.Visible = false;
-            // 
-            // rdBtnServerEditAutoStartNo
-            // 
-            this.rdBtnServerEditAutoStartNo.AutoSize = true;
-            this.rdBtnServerEditAutoStartNo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rdBtnServerEditAutoStartNo.Location = new System.Drawing.Point(937, 16);
-            this.rdBtnServerEditAutoStartNo.Name = "rdBtnServerEditAutoStartNo";
-            this.rdBtnServerEditAutoStartNo.Size = new System.Drawing.Size(39, 17);
-            this.rdBtnServerEditAutoStartNo.TabIndex = 1;
-            this.rdBtnServerEditAutoStartNo.Text = "No";
-            this.rdBtnServerEditAutoStartNo.UseVisualStyleBackColor = true;
-            this.rdBtnServerEditAutoStartNo.Visible = false;
-            // 
-            // rdBtnServerEditAutoStartYes
-            // 
-            this.rdBtnServerEditAutoStartYes.AutoSize = true;
-            this.rdBtnServerEditAutoStartYes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rdBtnServerEditAutoStartYes.Checked = true;
-            this.rdBtnServerEditAutoStartYes.Location = new System.Drawing.Point(867, 16);
-            this.rdBtnServerEditAutoStartYes.Name = "rdBtnServerEditAutoStartYes";
-            this.rdBtnServerEditAutoStartYes.Size = new System.Drawing.Size(43, 17);
-            this.rdBtnServerEditAutoStartYes.TabIndex = 0;
-            this.rdBtnServerEditAutoStartYes.TabStop = true;
-            this.rdBtnServerEditAutoStartYes.Text = "Yes";
-            this.rdBtnServerEditAutoStartYes.UseVisualStyleBackColor = true;
-            this.rdBtnServerEditAutoStartYes.Visible = false;
+            this.lblServerEditAutoStart.Text = "AutoStart (True or False) :";
             // 
             // tabPage3
             // 
@@ -1439,6 +1396,14 @@
             this.lblVersion.Size = new System.Drawing.Size(51, 13);
             this.lblVersion.TabIndex = 0;
             this.lblVersion.Text = "Version : ";
+            // 
+            // txtBoxServerEditAutoStart
+            // 
+            this.txtBoxServerEditAutoStart.Enabled = false;
+            this.txtBoxServerEditAutoStart.Location = new System.Drawing.Point(773, 365);
+            this.txtBoxServerEditAutoStart.Name = "txtBoxServerEditAutoStart";
+            this.txtBoxServerEditAutoStart.Size = new System.Drawing.Size(139, 20);
+            this.txtBoxServerEditAutoStart.TabIndex = 78;
             // 
             // Form1
             // 
@@ -1521,8 +1486,6 @@
         private System.Windows.Forms.TextBox txtBoxServerVirtServEditPort;
         private System.Windows.Forms.Label lblServerEditVirtServPort;
         private System.Windows.Forms.Label lblServerEditAutoStart;
-        private System.Windows.Forms.RadioButton rdBtnServerEditAutoStartNo;
-        private System.Windows.Forms.RadioButton rdBtnServerEditAutoStartYes;
         private System.Windows.Forms.Label lblServerEditVirtServMinNbClInChnlToFrceSlce;
         private System.Windows.Forms.Label lblServerEditVirtServIdentSecuLvl;
         private System.Windows.Forms.Label lblServerEditVirtServMaxClient;
@@ -1565,7 +1528,6 @@
         private System.Windows.Forms.RadioButton rdBtnServerEditShowModalMsg;
         private System.Windows.Forms.RadioButton rdBtnServerEditNoMessage;
         private System.Windows.Forms.Label lblServerEditHostMsgShow;
-        private System.Windows.Forms.ListBox lstBoxServerEditAutoStart;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Label lblServerEditTransfersDownldBandwthLimit;
@@ -1594,6 +1556,7 @@
         private System.Windows.Forms.Label lblServerEditServerPasswordNewPassword;
         private System.Windows.Forms.Label lblServerEditServerPassword;
         private System.Windows.Forms.TextBox txtBoxServerEditServerPasswordNewPassword;
+        private System.Windows.Forms.TextBox txtBoxServerEditAutoStart;
     }
 }
 
