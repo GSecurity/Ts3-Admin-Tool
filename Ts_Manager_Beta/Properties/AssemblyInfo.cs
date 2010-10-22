@@ -7,9 +7,9 @@ using System.Resources;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("Ts_Manager_Beta")]
-[assembly: AssemblyDescription("Teamspeak 3 Manager Beta")]
+[assembly: AssemblyDescription("Teamspeak 3 Administration Tool")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("SwissTeamspeak")]
 [assembly: AssemblyProduct("Ts_Manager_Beta")]
 [assembly: AssemblyCopyright("Copyright ©  2010 Marc Dankof aka GSecurity / TotoIsBack")]
 [assembly: AssemblyTrademark("")]
@@ -32,6 +32,6 @@ using System.Resources;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut 
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.1.26")]
-[assembly: AssemblyFileVersion("0.0.1.26")]
+[assembly: AssemblyVersion("0.0.1.27")]
+[assembly: AssemblyFileVersion("0.0.1.27")]
 [assembly: NeutralResourcesLanguageAttribute("en")]

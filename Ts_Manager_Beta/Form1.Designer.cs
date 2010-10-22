@@ -161,7 +161,6 @@
             this.lblAboutThx = new System.Windows.Forms.Label();
             this.lstBoxAboutThx = new System.Windows.Forms.ListBox();
             this.lblWarningNoServeradmin2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label2 = new System.Windows.Forms.Label();
@@ -194,7 +193,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.lblWarningNoServeradmin2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txtBoxEditPortNotQuery);
@@ -1778,15 +1776,6 @@
             this.lblWarningNoServeradmin2.Text = "/!\\ Warning /!\\   Then please, complete the form below and use the Connect button" +
                 " under it    /!\\ Warning /!\\";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(328, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(649, 72);
-            this.textBox1.TabIndex = 25;
-            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Gray;
@@ -2025,7 +2014,6 @@
         private System.Windows.Forms.ListBox lstBoxAboutThx;
         private System.Windows.Forms.Label lblAboutThx;
         private System.Windows.Forms.Label lblWarningNoServeradmin2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
