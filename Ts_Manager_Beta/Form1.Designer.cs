@@ -1686,6 +1686,10 @@
             this.lstBoxAboutChangelog.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxAboutChangelog.FormattingEnabled = true;
             this.lstBoxAboutChangelog.Items.AddRange(new object[] {
+            "Version Beta 0.0.1.28",
+            "==================",
+            "- Minor UI \"bug\" correction",
+            "",
             "Version Beta 0.0.1.26",
             "==================",
             "+ Added some error handling",
