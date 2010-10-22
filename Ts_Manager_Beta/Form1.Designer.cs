@@ -30,6 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxEditPortNotQuery = new System.Windows.Forms.TextBox();
+            this.btnEditServerNoServeradmin = new System.Windows.Forms.Button();
+            this.lblWarningNoServeradmin = new System.Windows.Forms.Label();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEditSelectedServer = new System.Windows.Forms.Button();
@@ -73,6 +77,8 @@
             this.txtBoxAddressIP = new System.Windows.Forms.TextBox();
             this.btnConnectInstance = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnServerEditApplyNoServeradmin = new System.Windows.Forms.Button();
+            this.txtBoxServerEditAutoStart = new System.Windows.Forms.TextBox();
             this.lblServerEditServerPasswordNewPassword = new System.Windows.Forms.Label();
             this.lblServerEditServerPassword = new System.Windows.Forms.Label();
             this.txtBoxServerEditServerPasswordNewPassword = new System.Windows.Forms.TextBox();
@@ -144,18 +150,31 @@
             this.btnServerEditApply = new System.Windows.Forms.Button();
             this.txtBoxServerEditVirtServMinClVer = new System.Windows.Forms.TextBox();
             this.lblServerEditVirtServMinClVer = new System.Windows.Forms.Label();
-            this.txtBoxServerVirtServEditPort = new System.Windows.Forms.TextBox();
+            this.txtBoxServerEditVirtServEditPort = new System.Windows.Forms.TextBox();
             this.lblServerEditVirtServPort = new System.Windows.Forms.Label();
             this.lblServerEditAutoStart = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.txtBoxServerEditAutoStart = new System.Windows.Forms.TextBox();
+            this.lstBoxAboutCopyrights = new System.Windows.Forms.TabPage();
+            this.lblAboutChangelog = new System.Windows.Forms.Label();
+            this.lstBoxAboutChangelog = new System.Windows.Forms.ListBox();
+            this.lblAboutVersionTitle = new System.Windows.Forms.Label();
+            this.lblAboutThx = new System.Windows.Forms.Label();
+            this.lstBoxAboutThx = new System.Windows.Forms.ListBox();
+            this.lblWarningNoServeradmin2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblAboutCopyrights = new System.Windows.Forms.Label();
+            this.lblAboutVersion = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.lstBoxAboutCopyrights.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -163,7 +182,8 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.lstBoxAboutCopyrights);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -173,7 +193,13 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.lblWarningNoServeradmin2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.txtBoxEditPortNotQuery);
+            this.tabPage1.Controls.Add(this.btnEditServerNoServeradmin);
+            this.tabPage1.Controls.Add(this.lblWarningNoServeradmin);
             this.tabPage1.Controls.Add(this.btnDisconnect);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblQueryPassword);
@@ -191,6 +217,50 @@
             this.tabPage1.Size = new System.Drawing.Size(985, 479);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Instance Info.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(345, 366);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Port (The Standard Port, Not The Query One. Ex : 9987) :";
+            // 
+            // txtBoxEditPortNotQuery
+            // 
+            this.txtBoxEditPortNotQuery.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtBoxEditPortNotQuery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxEditPortNotQuery.Location = new System.Drawing.Point(375, 385);
+            this.txtBoxEditPortNotQuery.Name = "txtBoxEditPortNotQuery";
+            this.txtBoxEditPortNotQuery.Size = new System.Drawing.Size(224, 20);
+            this.txtBoxEditPortNotQuery.TabIndex = 22;
+            this.txtBoxEditPortNotQuery.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnEditServerNoServeradmin
+            // 
+            this.btnEditServerNoServeradmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditServerNoServeradmin.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnEditServerNoServeradmin.Location = new System.Drawing.Point(18, 412);
+            this.btnEditServerNoServeradmin.Name = "btnEditServerNoServeradmin";
+            this.btnEditServerNoServeradmin.Size = new System.Drawing.Size(946, 23);
+            this.btnEditServerNoServeradmin.TabIndex = 21;
+            this.btnEditServerNoServeradmin.Text = "Connect (Using The Connect Port) And Edit";
+            this.btnEditServerNoServeradmin.UseVisualStyleBackColor = true;
+            this.btnEditServerNoServeradmin.Click += new System.EventHandler(this.btnEditServerNoServeradmin_Click);
+            // 
+            // lblWarningNoServeradmin
+            // 
+            this.lblWarningNoServeradmin.AutoSize = true;
+            this.lblWarningNoServeradmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningNoServeradmin.ForeColor = System.Drawing.Color.Orange;
+            this.lblWarningNoServeradmin.Location = new System.Drawing.Point(92, 329);
+            this.lblWarningNoServeradmin.Name = "lblWarningNoServeradmin";
+            this.lblWarningNoServeradmin.Size = new System.Drawing.Size(800, 13);
+            this.lblWarningNoServeradmin.TabIndex = 20;
+            this.lblWarningNoServeradmin.Text = "/!\\ Warning /!\\   If you are NOT connecting as \"serveradmin\", and have an insuffi" +
+                "cient permission error when connecting,   /!\\ Warning /!\\";
             // 
             // btnDisconnect
             // 
@@ -236,6 +306,7 @@
             this.groupBox1.Controls.Add(this.lstBoxServerPort);
             this.groupBox1.Controls.Add(this.lstBoxServerName);
             this.groupBox1.Controls.Add(this.lstBoxServerID);
+            this.groupBox1.ForeColor = System.Drawing.Color.PaleGreen;
             this.groupBox1.Location = new System.Drawing.Point(6, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(971, 233);
@@ -246,6 +317,7 @@
             // btnEditSelectedServer
             // 
             this.btnEditSelectedServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSelectedServer.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnEditSelectedServer.Location = new System.Drawing.Point(12, 189);
             this.btnEditSelectedServer.Name = "btnEditSelectedServer";
             this.btnEditSelectedServer.Size = new System.Drawing.Size(946, 25);
@@ -257,6 +329,7 @@
             // lblServerSecuLevel
             // 
             this.lblServerSecuLevel.AutoSize = true;
+            this.lblServerSecuLevel.ForeColor = System.Drawing.Color.Lime;
             this.lblServerSecuLevel.Location = new System.Drawing.Point(863, 25);
             this.lblServerSecuLevel.Name = "lblServerSecuLevel";
             this.lblServerSecuLevel.Size = new System.Drawing.Size(40, 13);
@@ -266,6 +339,7 @@
             // lblServerMinClientVersion
             // 
             this.lblServerMinClientVersion.AutoSize = true;
+            this.lblServerMinClientVersion.ForeColor = System.Drawing.Color.Lime;
             this.lblServerMinClientVersion.Location = new System.Drawing.Point(795, 25);
             this.lblServerMinClientVersion.Name = "lblServerMinClientVersion";
             this.lblServerMinClientVersion.Size = new System.Drawing.Size(70, 13);
@@ -275,6 +349,7 @@
             // lblServerMachineID
             // 
             this.lblServerMachineID.AutoSize = true;
+            this.lblServerMachineID.ForeColor = System.Drawing.Color.Lime;
             this.lblServerMachineID.Location = new System.Drawing.Point(729, 25);
             this.lblServerMachineID.Name = "lblServerMachineID";
             this.lblServerMachineID.Size = new System.Drawing.Size(68, 13);
@@ -283,6 +358,7 @@
             // 
             // lstBoxServerIdentSecuLvl
             // 
+            this.lstBoxServerIdentSecuLvl.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerIdentSecuLvl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerIdentSecuLvl.FormattingEnabled = true;
             this.lstBoxServerIdentSecuLvl.HorizontalScrollbar = true;
@@ -294,6 +370,7 @@
             // 
             // lstBoxServerMinClientVersion
             // 
+            this.lstBoxServerMinClientVersion.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerMinClientVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerMinClientVersion.FormattingEnabled = true;
             this.lstBoxServerMinClientVersion.HorizontalScrollbar = true;
@@ -305,6 +382,7 @@
             // 
             // lstboxServerMachineID
             // 
+            this.lstboxServerMachineID.BackColor = System.Drawing.Color.Silver;
             this.lstboxServerMachineID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstboxServerMachineID.FormattingEnabled = true;
             this.lstboxServerMachineID.HorizontalScrollbar = true;
@@ -317,6 +395,7 @@
             // lblServerAutoStart
             // 
             this.lblServerAutoStart.AutoSize = true;
+            this.lblServerAutoStart.ForeColor = System.Drawing.Color.Lime;
             this.lblServerAutoStart.Location = new System.Drawing.Point(901, 25);
             this.lblServerAutoStart.Name = "lblServerAutoStart";
             this.lblServerAutoStart.Size = new System.Drawing.Size(57, 13);
@@ -326,6 +405,7 @@
             // lblServerIsPassProtected
             // 
             this.lblServerIsPassProtected.AutoSize = true;
+            this.lblServerIsPassProtected.ForeColor = System.Drawing.Color.Lime;
             this.lblServerIsPassProtected.Location = new System.Drawing.Point(680, 25);
             this.lblServerIsPassProtected.Name = "lblServerIsPassProtected";
             this.lblServerIsPassProtected.Size = new System.Drawing.Size(40, 13);
@@ -335,6 +415,7 @@
             // lblServerCreationTime
             // 
             this.lblServerCreationTime.AutoSize = true;
+            this.lblServerCreationTime.ForeColor = System.Drawing.Color.Lime;
             this.lblServerCreationTime.Location = new System.Drawing.Point(604, 25);
             this.lblServerCreationTime.Name = "lblServerCreationTime";
             this.lblServerCreationTime.Size = new System.Drawing.Size(78, 13);
@@ -343,6 +424,7 @@
             // 
             // lstBoxServerIsPassProtected
             // 
+            this.lstBoxServerIsPassProtected.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerIsPassProtected.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerIsPassProtected.FormattingEnabled = true;
             this.lstBoxServerIsPassProtected.HorizontalScrollbar = true;
@@ -354,6 +436,7 @@
             // 
             // lstBoxServerCreationDate
             // 
+            this.lstBoxServerCreationDate.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerCreationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerCreationDate.FormattingEnabled = true;
             this.lstBoxServerCreationDate.HorizontalScrollbar = true;
@@ -366,6 +449,7 @@
             // lblServerVersion
             // 
             this.lblServerVersion.AutoSize = true;
+            this.lblServerVersion.ForeColor = System.Drawing.Color.Lime;
             this.lblServerVersion.Location = new System.Drawing.Point(525, 25);
             this.lblServerVersion.Name = "lblServerVersion";
             this.lblServerVersion.Size = new System.Drawing.Size(48, 13);
@@ -375,6 +459,7 @@
             // lblServerPlatform
             // 
             this.lblServerPlatform.AutoSize = true;
+            this.lblServerPlatform.ForeColor = System.Drawing.Color.Lime;
             this.lblServerPlatform.Location = new System.Drawing.Point(476, 25);
             this.lblServerPlatform.Name = "lblServerPlatform";
             this.lblServerPlatform.Size = new System.Drawing.Size(51, 13);
@@ -383,6 +468,7 @@
             // 
             // lstBoxServerVersion
             // 
+            this.lstBoxServerVersion.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerVersion.FormattingEnabled = true;
             this.lstBoxServerVersion.HorizontalScrollbar = true;
@@ -394,6 +480,7 @@
             // 
             // lstBoxServerAutoStart
             // 
+            this.lstBoxServerAutoStart.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerAutoStart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerAutoStart.FormattingEnabled = true;
             this.lstBoxServerAutoStart.HorizontalScrollbar = true;
@@ -405,6 +492,7 @@
             // 
             // lstBoxServerPlatform
             // 
+            this.lstBoxServerPlatform.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerPlatform.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerPlatform.FormattingEnabled = true;
             this.lstBoxServerPlatform.HorizontalScrollbar = true;
@@ -417,6 +505,7 @@
             // lblServerReservedSlot
             // 
             this.lblServerReservedSlot.AutoSize = true;
+            this.lblServerReservedSlot.ForeColor = System.Drawing.Color.Lime;
             this.lblServerReservedSlot.Location = new System.Drawing.Point(432, 25);
             this.lblServerReservedSlot.Name = "lblServerReservedSlot";
             this.lblServerReservedSlot.Size = new System.Drawing.Size(37, 13);
@@ -425,6 +514,7 @@
             // 
             // lstBoxServerReservedSlots
             // 
+            this.lstBoxServerReservedSlots.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerReservedSlots.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerReservedSlots.FormattingEnabled = true;
             this.lstBoxServerReservedSlots.HorizontalScrollbar = true;
@@ -436,6 +526,7 @@
             // 
             // lstBoxServerOnlineClients
             // 
+            this.lstBoxServerOnlineClients.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerOnlineClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerOnlineClients.FormattingEnabled = true;
             this.lstBoxServerOnlineClients.HorizontalScrollbar = true;
@@ -448,6 +539,7 @@
             // lblServerOnlineClient
             // 
             this.lblServerOnlineClient.AutoSize = true;
+            this.lblServerOnlineClient.ForeColor = System.Drawing.Color.Lime;
             this.lblServerOnlineClient.Location = new System.Drawing.Point(351, 25);
             this.lblServerOnlineClient.Name = "lblServerOnlineClient";
             this.lblServerOnlineClient.Size = new System.Drawing.Size(83, 13);
@@ -456,6 +548,7 @@
             // 
             // lstBoxServerUpTime
             // 
+            this.lstBoxServerUpTime.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerUpTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerUpTime.FormattingEnabled = true;
             this.lstBoxServerUpTime.HorizontalScrollbar = true;
@@ -467,6 +560,7 @@
             // 
             // lstBoxServerStatus
             // 
+            this.lstBoxServerStatus.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerStatus.FormattingEnabled = true;
             this.lstBoxServerStatus.HorizontalScrollbar = true;
@@ -479,6 +573,7 @@
             // lblServerUpTime
             // 
             this.lblServerUpTime.AutoSize = true;
+            this.lblServerUpTime.ForeColor = System.Drawing.Color.Lime;
             this.lblServerUpTime.Location = new System.Drawing.Point(281, 25);
             this.lblServerUpTime.Name = "lblServerUpTime";
             this.lblServerUpTime.Size = new System.Drawing.Size(50, 13);
@@ -488,6 +583,7 @@
             // lblServerStatus
             // 
             this.lblServerStatus.AutoSize = true;
+            this.lblServerStatus.ForeColor = System.Drawing.Color.Lime;
             this.lblServerStatus.Location = new System.Drawing.Point(226, 25);
             this.lblServerStatus.Name = "lblServerStatus";
             this.lblServerStatus.Size = new System.Drawing.Size(43, 13);
@@ -497,6 +593,7 @@
             // lblServerName
             // 
             this.lblServerName.AutoSize = true;
+            this.lblServerName.ForeColor = System.Drawing.Color.Lime;
             this.lblServerName.Location = new System.Drawing.Point(56, 25);
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(75, 13);
@@ -506,6 +603,7 @@
             // lblServerPort
             // 
             this.lblServerPort.AutoSize = true;
+            this.lblServerPort.ForeColor = System.Drawing.Color.Lime;
             this.lblServerPort.Location = new System.Drawing.Point(176, 25);
             this.lblServerPort.Name = "lblServerPort";
             this.lblServerPort.Size = new System.Drawing.Size(32, 13);
@@ -515,6 +613,7 @@
             // lblServerID
             // 
             this.lblServerID.AutoSize = true;
+            this.lblServerID.ForeColor = System.Drawing.Color.Lime;
             this.lblServerID.Location = new System.Drawing.Point(9, 25);
             this.lblServerID.Name = "lblServerID";
             this.lblServerID.Size = new System.Drawing.Size(24, 13);
@@ -523,6 +622,7 @@
             // 
             // lstBoxServerPort
             // 
+            this.lstBoxServerPort.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerPort.FormattingEnabled = true;
             this.lstBoxServerPort.HorizontalScrollbar = true;
@@ -534,6 +634,7 @@
             // 
             // lstBoxServerName
             // 
+            this.lstBoxServerName.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerName.FormattingEnabled = true;
             this.lstBoxServerName.HorizontalScrollbar = true;
@@ -545,6 +646,7 @@
             // 
             // lstBoxServerID
             // 
+            this.lstBoxServerID.BackColor = System.Drawing.Color.Silver;
             this.lstBoxServerID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxServerID.FormattingEnabled = true;
             this.lstBoxServerID.HorizontalScrollbar = true;
@@ -556,6 +658,7 @@
             // lblQueryPassword
             // 
             this.lblQueryPassword.AutoSize = true;
+            this.lblQueryPassword.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblQueryPassword.Location = new System.Drawing.Point(109, 42);
             this.lblQueryPassword.Name = "lblQueryPassword";
             this.lblQueryPassword.Size = new System.Drawing.Size(90, 13);
@@ -564,16 +667,19 @@
             // 
             // txtBoxQueryPassword
             // 
+            this.txtBoxQueryPassword.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtBoxQueryPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxQueryPassword.Location = new System.Drawing.Point(112, 58);
             this.txtBoxQueryPassword.Name = "txtBoxQueryPassword";
             this.txtBoxQueryPassword.Size = new System.Drawing.Size(100, 20);
             this.txtBoxQueryPassword.TabIndex = 9;
             this.txtBoxQueryPassword.UseSystemPasswordChar = true;
+            this.txtBoxQueryPassword.TextChanged += new System.EventHandler(this.txtBoxQueryPassword_TextChanged);
             // 
             // lblQueryLogin
             // 
             this.lblQueryLogin.AutoSize = true;
+            this.lblQueryLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblQueryLogin.Location = new System.Drawing.Point(3, 42);
             this.lblQueryLogin.Name = "lblQueryLogin";
             this.lblQueryLogin.Size = new System.Drawing.Size(70, 13);
@@ -582,15 +688,18 @@
             // 
             // txtBoxQueryLogin
             // 
+            this.txtBoxQueryLogin.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtBoxQueryLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxQueryLogin.Location = new System.Drawing.Point(6, 58);
             this.txtBoxQueryLogin.Name = "txtBoxQueryLogin";
             this.txtBoxQueryLogin.Size = new System.Drawing.Size(100, 20);
             this.txtBoxQueryLogin.TabIndex = 7;
+            this.txtBoxQueryLogin.TextChanged += new System.EventHandler(this.txtBoxQueryLogin_TextChanged);
             // 
             // lblPort
             // 
             this.lblPort.AutoSize = true;
+            this.lblPort.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblPort.Location = new System.Drawing.Point(109, 3);
             this.lblPort.Name = "lblPort";
             this.lblPort.Size = new System.Drawing.Size(32, 13);
@@ -600,6 +709,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblAddress.Location = new System.Drawing.Point(3, 3);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(72, 13);
@@ -608,6 +718,7 @@
             // 
             // txtBoxPort
             // 
+            this.txtBoxPort.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtBoxPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxPort.Location = new System.Drawing.Point(112, 19);
             this.txtBoxPort.Name = "txtBoxPort";
@@ -617,6 +728,7 @@
             // 
             // txtBoxAddressIP
             // 
+            this.txtBoxAddressIP.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtBoxAddressIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxAddressIP.Location = new System.Drawing.Point(6, 19);
             this.txtBoxAddressIP.Name = "txtBoxAddressIP";
@@ -627,6 +739,7 @@
             // btnConnectInstance
             // 
             this.btnConnectInstance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectInstance.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.btnConnectInstance.Location = new System.Drawing.Point(218, 19);
             this.btnConnectInstance.Name = "btnConnectInstance";
             this.btnConnectInstance.Size = new System.Drawing.Size(75, 23);
@@ -638,7 +751,8 @@
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
-            this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage2.BackColor = System.Drawing.Color.DarkRed;
+            this.tabPage2.Controls.Add(this.btnServerEditApplyNoServeradmin);
             this.tabPage2.Controls.Add(this.txtBoxServerEditAutoStart);
             this.tabPage2.Controls.Add(this.lblServerEditServerPasswordNewPassword);
             this.tabPage2.Controls.Add(this.lblServerEditServerPassword);
@@ -711,7 +825,7 @@
             this.tabPage2.Controls.Add(this.btnServerEditApply);
             this.tabPage2.Controls.Add(this.txtBoxServerEditVirtServMinClVer);
             this.tabPage2.Controls.Add(this.lblServerEditVirtServMinClVer);
-            this.tabPage2.Controls.Add(this.txtBoxServerVirtServEditPort);
+            this.tabPage2.Controls.Add(this.txtBoxServerEditVirtServEditPort);
             this.tabPage2.Controls.Add(this.lblServerEditVirtServPort);
             this.tabPage2.Controls.Add(this.lblServerEditAutoStart);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -721,433 +835,549 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Server Edition";
             // 
+            // btnServerEditApplyNoServeradmin
+            // 
+            this.btnServerEditApplyNoServeradmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServerEditApplyNoServeradmin.ForeColor = System.Drawing.Color.Gold;
+            this.btnServerEditApplyNoServeradmin.Location = new System.Drawing.Point(8, 408);
+            this.btnServerEditApplyNoServeradmin.Name = "btnServerEditApplyNoServeradmin";
+            this.btnServerEditApplyNoServeradmin.Size = new System.Drawing.Size(110, 23);
+            this.btnServerEditApplyNoServeradmin.TabIndex = 79;
+            this.btnServerEditApplyNoServeradmin.Text = "Apply Change(s)";
+            this.btnServerEditApplyNoServeradmin.UseVisualStyleBackColor = true;
+            this.btnServerEditApplyNoServeradmin.Click += new System.EventHandler(this.btnServerEditApplyNoServeradmin_Click);
+            // 
+            // txtBoxServerEditAutoStart
+            // 
+            this.txtBoxServerEditAutoStart.BackColor = System.Drawing.Color.Firebrick;
+            this.txtBoxServerEditAutoStart.Enabled = false;
+            this.txtBoxServerEditAutoStart.Location = new System.Drawing.Point(773, 365);
+            this.txtBoxServerEditAutoStart.Name = "txtBoxServerEditAutoStart";
+            this.txtBoxServerEditAutoStart.Size = new System.Drawing.Size(139, 20);
+            this.txtBoxServerEditAutoStart.TabIndex = 78;
+            this.txtBoxServerEditAutoStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblServerEditServerPasswordNewPassword
             // 
             this.lblServerEditServerPasswordNewPassword.AutoSize = true;
+            this.lblServerEditServerPasswordNewPassword.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditServerPasswordNewPassword.Location = new System.Drawing.Point(619, 342);
             this.lblServerEditServerPasswordNewPassword.Name = "lblServerEditServerPasswordNewPassword";
             this.lblServerEditServerPasswordNewPassword.Size = new System.Drawing.Size(87, 13);
             this.lblServerEditServerPasswordNewPassword.TabIndex = 77;
             this.lblServerEditServerPasswordNewPassword.Text = "New Password: :";
+            this.lblServerEditServerPasswordNewPassword.Click += new System.EventHandler(this.lblServerEditServerPasswordNewPassword_Click);
             // 
             // lblServerEditServerPassword
             // 
             this.lblServerEditServerPassword.AutoSize = true;
             this.lblServerEditServerPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditServerPassword.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditServerPassword.Location = new System.Drawing.Point(619, 320);
             this.lblServerEditServerPassword.Name = "lblServerEditServerPassword";
             this.lblServerEditServerPassword.Size = new System.Drawing.Size(102, 13);
             this.lblServerEditServerPassword.TabIndex = 76;
             this.lblServerEditServerPassword.Text = "Server Password";
+            this.lblServerEditServerPassword.Click += new System.EventHandler(this.lblServerEditServerPassword_Click);
             // 
             // txtBoxServerEditServerPasswordNewPassword
             // 
+            this.txtBoxServerEditServerPasswordNewPassword.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditServerPasswordNewPassword.Enabled = false;
             this.txtBoxServerEditServerPasswordNewPassword.Location = new System.Drawing.Point(773, 339);
             this.txtBoxServerEditServerPasswordNewPassword.Name = "txtBoxServerEditServerPasswordNewPassword";
             this.txtBoxServerEditServerPasswordNewPassword.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditServerPasswordNewPassword.TabIndex = 75;
+            this.txtBoxServerEditServerPasswordNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblServerEditTransfers
             // 
             this.lblServerEditTransfers.AutoSize = true;
             this.lblServerEditTransfers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditTransfers.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditTransfers.Location = new System.Drawing.Point(619, 180);
             this.lblServerEditTransfers.Name = "lblServerEditTransfers";
             this.lblServerEditTransfers.Size = new System.Drawing.Size(60, 13);
             this.lblServerEditTransfers.TabIndex = 74;
             this.lblServerEditTransfers.Text = "Transfers";
+            this.lblServerEditTransfers.Click += new System.EventHandler(this.lblServerEditTransfers_Click);
             // 
             // lblServerEditAntiFlood
             // 
             this.lblServerEditAntiFlood.AutoSize = true;
             this.lblServerEditAntiFlood.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditAntiFlood.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditAntiFlood.Location = new System.Drawing.Point(619, 27);
             this.lblServerEditAntiFlood.Name = "lblServerEditAntiFlood";
             this.lblServerEditAntiFlood.Size = new System.Drawing.Size(64, 13);
             this.lblServerEditAntiFlood.TabIndex = 73;
             this.lblServerEditAntiFlood.Text = "Anti Flood";
+            this.lblServerEditAntiFlood.Click += new System.EventHandler(this.lblServerEditAntiFlood_Click);
             // 
             // lblServerEditAutoBan
             // 
             this.lblServerEditAutoBan.AutoSize = true;
             this.lblServerEditAutoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditAutoBan.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditAutoBan.Location = new System.Drawing.Point(325, 290);
             this.lblServerEditAutoBan.Name = "lblServerEditAutoBan";
             this.lblServerEditAutoBan.Size = new System.Drawing.Size(55, 13);
             this.lblServerEditAutoBan.TabIndex = 72;
             this.lblServerEditAutoBan.Text = "AutoBan";
+            this.lblServerEditAutoBan.Click += new System.EventHandler(this.lblServerEditAutoBan_Click);
             // 
             // lblServerEditHost
             // 
             this.lblServerEditHost.AutoSize = true;
             this.lblServerEditHost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditHost.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditHost.Location = new System.Drawing.Point(325, 27);
             this.lblServerEditHost.Name = "lblServerEditHost";
             this.lblServerEditHost.Size = new System.Drawing.Size(33, 13);
             this.lblServerEditHost.TabIndex = 71;
             this.lblServerEditHost.Text = "Host";
+            this.lblServerEditHost.Click += new System.EventHandler(this.lblServerEditHost_Click);
             // 
             // lblServerEditStandartGroups
             // 
             this.lblServerEditStandartGroups.AutoSize = true;
             this.lblServerEditStandartGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditStandartGroups.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditStandartGroups.Location = new System.Drawing.Point(11, 271);
             this.lblServerEditStandartGroups.Name = "lblServerEditStandartGroups";
             this.lblServerEditStandartGroups.Size = new System.Drawing.Size(102, 13);
             this.lblServerEditStandartGroups.TabIndex = 70;
             this.lblServerEditStandartGroups.Text = "Standard Groups";
+            this.lblServerEditStandartGroups.Click += new System.EventHandler(this.lblServerEditStandartGroups_Click);
             // 
             // lblServerEditVirtServEditor
             // 
             this.lblServerEditVirtServEditor.AutoSize = true;
+            this.lblServerEditVirtServEditor.BackColor = System.Drawing.Color.DarkRed;
             this.lblServerEditVirtServEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServEditor.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblServerEditVirtServEditor.Location = new System.Drawing.Point(8, 27);
             this.lblServerEditVirtServEditor.Name = "lblServerEditVirtServEditor";
             this.lblServerEditVirtServEditor.Size = new System.Drawing.Size(125, 13);
             this.lblServerEditVirtServEditor.TabIndex = 69;
             this.lblServerEditVirtServEditor.Text = "Virtual Server Editor ";
+            this.lblServerEditVirtServEditor.Click += new System.EventHandler(this.lblServerEditVirtServEditor_Click);
             // 
             // lblServerEditTransfersDownldBandwthLimit
             // 
             this.lblServerEditTransfersDownldBandwthLimit.AutoSize = true;
+            this.lblServerEditTransfersDownldBandwthLimit.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditTransfersDownldBandwthLimit.Location = new System.Drawing.Point(619, 264);
             this.lblServerEditTransfersDownldBandwthLimit.Name = "lblServerEditTransfersDownldBandwthLimit";
             this.lblServerEditTransfersDownldBandwthLimit.Size = new System.Drawing.Size(138, 13);
             this.lblServerEditTransfersDownldBandwthLimit.TabIndex = 68;
             this.lblServerEditTransfersDownldBandwthLimit.Text = "Download Bandwidth Limit :";
+            this.lblServerEditTransfersDownldBandwthLimit.Click += new System.EventHandler(this.lblServerEditTransfersDownldBandwthLimit_Click);
             // 
             // lblServerEditTransfersDownldQuota
             // 
             this.lblServerEditTransfersDownldQuota.AutoSize = true;
+            this.lblServerEditTransfersDownldQuota.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditTransfersDownldQuota.Location = new System.Drawing.Point(619, 290);
             this.lblServerEditTransfersDownldQuota.Name = "lblServerEditTransfersDownldQuota";
             this.lblServerEditTransfersDownldQuota.Size = new System.Drawing.Size(93, 13);
             this.lblServerEditTransfersDownldQuota.TabIndex = 67;
             this.lblServerEditTransfersDownldQuota.Text = "Download Quota :";
+            this.lblServerEditTransfersDownldQuota.Click += new System.EventHandler(this.lblServerEditTransfersDownldQuota_Click);
             // 
             // lblServerEditAntiFloodPtsBanTime
             // 
             this.lblServerEditAntiFloodPtsBanTime.AutoSize = true;
+            this.lblServerEditAntiFloodPtsBanTime.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAntiFloodPtsBanTime.Location = new System.Drawing.Point(619, 157);
             this.lblServerEditAntiFloodPtsBanTime.Name = "lblServerEditAntiFloodPtsBanTime";
             this.lblServerEditAntiFloodPtsBanTime.Size = new System.Drawing.Size(90, 13);
             this.lblServerEditAntiFloodPtsBanTime.TabIndex = 66;
             this.lblServerEditAntiFloodPtsBanTime.Text = "Points Ban Time :";
+            this.lblServerEditAntiFloodPtsBanTime.Click += new System.EventHandler(this.lblServerEditAntiFloodPtsBanTime_Click);
             // 
             // lblServerEditTransfersUpldQuota
             // 
             this.lblServerEditTransfersUpldQuota.AutoSize = true;
+            this.lblServerEditTransfersUpldQuota.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditTransfersUpldQuota.Location = new System.Drawing.Point(619, 238);
             this.lblServerEditTransfersUpldQuota.Name = "lblServerEditTransfersUpldQuota";
             this.lblServerEditTransfersUpldQuota.Size = new System.Drawing.Size(79, 13);
             this.lblServerEditTransfersUpldQuota.TabIndex = 65;
             this.lblServerEditTransfersUpldQuota.Text = "Upload Quota :";
+            this.lblServerEditTransfersUpldQuota.Click += new System.EventHandler(this.lblServerEditTransfersUpldQuota_Click);
             // 
             // lblServerEditTransfersUpldBandwthLimit
             // 
             this.lblServerEditTransfersUpldBandwthLimit.AutoSize = true;
+            this.lblServerEditTransfersUpldBandwthLimit.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditTransfersUpldBandwthLimit.Location = new System.Drawing.Point(619, 212);
             this.lblServerEditTransfersUpldBandwthLimit.Name = "lblServerEditTransfersUpldBandwthLimit";
             this.lblServerEditTransfersUpldBandwthLimit.Size = new System.Drawing.Size(124, 13);
             this.lblServerEditTransfersUpldBandwthLimit.TabIndex = 64;
             this.lblServerEditTransfersUpldBandwthLimit.Text = "Upload Bandwidth Limit :";
+            this.lblServerEditTransfersUpldBandwthLimit.Click += new System.EventHandler(this.lblServerEditTransfersUpldBandwthLimit_Click);
             // 
             // lblServerEditAntiFloodPtsNeededWarn
             // 
             this.lblServerEditAntiFloodPtsNeededWarn.AutoSize = true;
+            this.lblServerEditAntiFloodPtsNeededWarn.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAntiFloodPtsNeededWarn.Location = new System.Drawing.Point(619, 79);
             this.lblServerEditAntiFloodPtsNeededWarn.Name = "lblServerEditAntiFloodPtsNeededWarn";
             this.lblServerEditAntiFloodPtsNeededWarn.Size = new System.Drawing.Size(126, 13);
             this.lblServerEditAntiFloodPtsNeededWarn.TabIndex = 63;
             this.lblServerEditAntiFloodPtsNeededWarn.Text = "Points Needed Warning :";
+            this.lblServerEditAntiFloodPtsNeededWarn.Click += new System.EventHandler(this.lblServerEditAntiFloodPtsNeededWarn_Click);
             // 
             // lblServerEditAntiFloodPtsNeededBan
             // 
             this.lblServerEditAntiFloodPtsNeededBan.AutoSize = true;
+            this.lblServerEditAntiFloodPtsNeededBan.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAntiFloodPtsNeededBan.Location = new System.Drawing.Point(619, 131);
             this.lblServerEditAntiFloodPtsNeededBan.Name = "lblServerEditAntiFloodPtsNeededBan";
             this.lblServerEditAntiFloodPtsNeededBan.Size = new System.Drawing.Size(105, 13);
             this.lblServerEditAntiFloodPtsNeededBan.TabIndex = 62;
             this.lblServerEditAntiFloodPtsNeededBan.Text = "Points Needed Ban :";
+            this.lblServerEditAntiFloodPtsNeededBan.Click += new System.EventHandler(this.lblServerEditAntiFloodPtsNeededBan_Click);
             // 
             // lblServerEditAntiFloodPtsTickReduce
             // 
             this.lblServerEditAntiFloodPtsTickReduce.AutoSize = true;
+            this.lblServerEditAntiFloodPtsTickReduce.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAntiFloodPtsTickReduce.Location = new System.Drawing.Point(619, 53);
             this.lblServerEditAntiFloodPtsTickReduce.Name = "lblServerEditAntiFloodPtsTickReduce";
             this.lblServerEditAntiFloodPtsTickReduce.Size = new System.Drawing.Size(107, 13);
             this.lblServerEditAntiFloodPtsTickReduce.TabIndex = 61;
             this.lblServerEditAntiFloodPtsTickReduce.Text = "Points Tick Reduce :";
+            this.lblServerEditAntiFloodPtsTickReduce.Click += new System.EventHandler(this.lblServerEditAntiFloodPtsTickReduce_Click);
             // 
             // lblServerEditAntiFloodPtsNeededKick
             // 
             this.lblServerEditAntiFloodPtsNeededKick.AutoSize = true;
+            this.lblServerEditAntiFloodPtsNeededKick.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAntiFloodPtsNeededKick.Location = new System.Drawing.Point(619, 105);
             this.lblServerEditAntiFloodPtsNeededKick.Name = "lblServerEditAntiFloodPtsNeededKick";
             this.lblServerEditAntiFloodPtsNeededKick.Size = new System.Drawing.Size(107, 13);
             this.lblServerEditAntiFloodPtsNeededKick.TabIndex = 60;
             this.lblServerEditAntiFloodPtsNeededKick.Text = "Points Needed Kick :";
+            this.lblServerEditAntiFloodPtsNeededKick.Click += new System.EventHandler(this.lblServerEditAntiFloodPtsNeededKick_Click);
             // 
             // lblServerEditAutoBanCount
             // 
             this.lblServerEditAutoBanCount.AutoSize = true;
+            this.lblServerEditAutoBanCount.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAutoBanCount.Location = new System.Drawing.Point(325, 316);
             this.lblServerEditAutoBanCount.Name = "lblServerEditAutoBanCount";
             this.lblServerEditAutoBanCount.Size = new System.Drawing.Size(84, 13);
             this.lblServerEditAutoBanCount.TabIndex = 59;
             this.lblServerEditAutoBanCount.Text = "Autoban Count :";
+            this.lblServerEditAutoBanCount.Click += new System.EventHandler(this.lblServerEditAutoBanCount_Click);
             // 
             // lblServerEditAutoBanTime
             // 
             this.lblServerEditAutoBanTime.AutoSize = true;
+            this.lblServerEditAutoBanTime.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAutoBanTime.Location = new System.Drawing.Point(325, 342);
             this.lblServerEditAutoBanTime.Name = "lblServerEditAutoBanTime";
             this.lblServerEditAutoBanTime.Size = new System.Drawing.Size(79, 13);
             this.lblServerEditAutoBanTime.TabIndex = 58;
             this.lblServerEditAutoBanTime.Text = "Autoban Time :";
+            this.lblServerEditAutoBanTime.Click += new System.EventHandler(this.lblServerEditAutoBanTime_Click);
             // 
             // lblServerEditAutoBanRemoveTime
             // 
             this.lblServerEditAutoBanRemoveTime.AutoSize = true;
+            this.lblServerEditAutoBanRemoveTime.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAutoBanRemoveTime.Location = new System.Drawing.Point(325, 368);
             this.lblServerEditAutoBanRemoveTime.Name = "lblServerEditAutoBanRemoveTime";
             this.lblServerEditAutoBanRemoveTime.Size = new System.Drawing.Size(79, 13);
             this.lblServerEditAutoBanRemoveTime.TabIndex = 57;
             this.lblServerEditAutoBanRemoveTime.Text = "Remove Time :";
+            this.lblServerEditAutoBanRemoveTime.Click += new System.EventHandler(this.lblServerEditAutoBanRemoveTime_Click);
             // 
             // lblServerEditHostBtnTooltip
             // 
             this.lblServerEditHostBtnTooltip.AutoSize = true;
+            this.lblServerEditHostBtnTooltip.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostBtnTooltip.Location = new System.Drawing.Point(325, 238);
             this.lblServerEditHostBtnTooltip.Name = "lblServerEditHostBtnTooltip";
             this.lblServerEditHostBtnTooltip.Size = new System.Drawing.Size(104, 13);
             this.lblServerEditHostBtnTooltip.TabIndex = 56;
             this.lblServerEditHostBtnTooltip.Text = "Host Button Tooltip :";
+            this.lblServerEditHostBtnTooltip.Click += new System.EventHandler(this.lblServerEditHostBtnTooltip_Click);
             // 
             // lblServerEditHostBtnUrl
             // 
             this.lblServerEditHostBtnUrl.AutoSize = true;
+            this.lblServerEditHostBtnUrl.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostBtnUrl.Location = new System.Drawing.Point(325, 264);
             this.lblServerEditHostBtnUrl.Name = "lblServerEditHostBtnUrl";
             this.lblServerEditHostBtnUrl.Size = new System.Drawing.Size(85, 13);
             this.lblServerEditHostBtnUrl.TabIndex = 55;
             this.lblServerEditHostBtnUrl.Text = "Host Button Url :";
+            this.lblServerEditHostBtnUrl.Click += new System.EventHandler(this.lblServerEditHostBtnUrl_Click);
             // 
             // lblServerEditHostBnrInter
             // 
             this.lblServerEditHostBnrInter.AutoSize = true;
+            this.lblServerEditHostBnrInter.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostBnrInter.Location = new System.Drawing.Point(325, 212);
             this.lblServerEditHostBnrInter.Name = "lblServerEditHostBnrInter";
             this.lblServerEditHostBnrInter.Size = new System.Drawing.Size(110, 13);
             this.lblServerEditHostBnrInter.TabIndex = 54;
             this.lblServerEditHostBnrInter.Text = "Host Banner Interval :";
+            this.lblServerEditHostBnrInter.Click += new System.EventHandler(this.lblServerEditHostBnrInter_Click);
             // 
             // lblServerEditHostUrl
             // 
             this.lblServerEditHostUrl.AutoSize = true;
+            this.lblServerEditHostUrl.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostUrl.Location = new System.Drawing.Point(325, 160);
             this.lblServerEditHostUrl.Name = "lblServerEditHostUrl";
             this.lblServerEditHostUrl.Size = new System.Drawing.Size(51, 13);
             this.lblServerEditHostUrl.TabIndex = 53;
             this.lblServerEditHostUrl.Text = "Host Url :";
+            this.lblServerEditHostUrl.Click += new System.EventHandler(this.lblServerEditHostUrl_Click);
             // 
             // lblServerEditHostBnrUrl
             // 
             this.lblServerEditHostBnrUrl.AutoSize = true;
+            this.lblServerEditHostBnrUrl.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostBnrUrl.Location = new System.Drawing.Point(325, 186);
             this.lblServerEditHostBnrUrl.Name = "lblServerEditHostBnrUrl";
             this.lblServerEditHostBnrUrl.Size = new System.Drawing.Size(88, 13);
             this.lblServerEditHostBnrUrl.TabIndex = 52;
             this.lblServerEditHostBnrUrl.Text = "Host Banner Url :";
+            this.lblServerEditHostBnrUrl.Click += new System.EventHandler(this.lblServerEditHostBnrUrl_Click);
             // 
             // rdBtnServerEditShowMsgInLog
             // 
             this.rdBtnServerEditShowMsgInLog.AutoSize = true;
+            this.rdBtnServerEditShowMsgInLog.BackColor = System.Drawing.Color.DarkRed;
             this.rdBtnServerEditShowMsgInLog.Location = new System.Drawing.Point(456, 97);
             this.rdBtnServerEditShowMsgInLog.Name = "rdBtnServerEditShowMsgInLog";
             this.rdBtnServerEditShowMsgInLog.Size = new System.Drawing.Size(125, 17);
             this.rdBtnServerEditShowMsgInLog.TabIndex = 50;
             this.rdBtnServerEditShowMsgInLog.Text = "Show message in log";
-            this.rdBtnServerEditShowMsgInLog.UseVisualStyleBackColor = true;
+            this.rdBtnServerEditShowMsgInLog.UseVisualStyleBackColor = false;
             // 
             // rdBtnServerEditModalMsgAndExit
             // 
             this.rdBtnServerEditModalMsgAndExit.AutoSize = true;
+            this.rdBtnServerEditModalMsgAndExit.BackColor = System.Drawing.Color.DarkRed;
             this.rdBtnServerEditModalMsgAndExit.Location = new System.Drawing.Point(456, 133);
             this.rdBtnServerEditModalMsgAndExit.Name = "rdBtnServerEditModalMsgAndExit";
             this.rdBtnServerEditModalMsgAndExit.Size = new System.Drawing.Size(139, 17);
             this.rdBtnServerEditModalMsgAndExit.TabIndex = 49;
             this.rdBtnServerEditModalMsgAndExit.Text = "Modal message and exit";
-            this.rdBtnServerEditModalMsgAndExit.UseVisualStyleBackColor = true;
+            this.rdBtnServerEditModalMsgAndExit.UseVisualStyleBackColor = false;
             // 
             // rdBtnServerEditShowModalMsg
             // 
             this.rdBtnServerEditShowModalMsg.AutoSize = true;
+            this.rdBtnServerEditShowModalMsg.BackColor = System.Drawing.Color.DarkRed;
             this.rdBtnServerEditShowModalMsg.Location = new System.Drawing.Point(456, 115);
             this.rdBtnServerEditShowModalMsg.Name = "rdBtnServerEditShowModalMsg";
             this.rdBtnServerEditShowModalMsg.Size = new System.Drawing.Size(128, 17);
             this.rdBtnServerEditShowModalMsg.TabIndex = 48;
             this.rdBtnServerEditShowModalMsg.Text = "Show modal message";
-            this.rdBtnServerEditShowModalMsg.UseVisualStyleBackColor = true;
+            this.rdBtnServerEditShowModalMsg.UseVisualStyleBackColor = false;
             // 
             // rdBtnServerEditNoMessage
             // 
             this.rdBtnServerEditNoMessage.AutoSize = true;
+            this.rdBtnServerEditNoMessage.BackColor = System.Drawing.Color.DarkRed;
             this.rdBtnServerEditNoMessage.Location = new System.Drawing.Point(456, 79);
             this.rdBtnServerEditNoMessage.Name = "rdBtnServerEditNoMessage";
             this.rdBtnServerEditNoMessage.Size = new System.Drawing.Size(85, 17);
             this.rdBtnServerEditNoMessage.TabIndex = 47;
             this.rdBtnServerEditNoMessage.Text = "No Message";
-            this.rdBtnServerEditNoMessage.UseVisualStyleBackColor = true;
+            this.rdBtnServerEditNoMessage.UseVisualStyleBackColor = false;
             // 
             // lblServerEditHostMsgShow
             // 
             this.lblServerEditHostMsgShow.AutoSize = true;
+            this.lblServerEditHostMsgShow.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostMsgShow.Location = new System.Drawing.Point(325, 83);
             this.lblServerEditHostMsgShow.Name = "lblServerEditHostMsgShow";
             this.lblServerEditHostMsgShow.Size = new System.Drawing.Size(108, 13);
             this.lblServerEditHostMsgShow.TabIndex = 46;
             this.lblServerEditHostMsgShow.Text = "Host message show :";
+            this.lblServerEditHostMsgShow.Click += new System.EventHandler(this.lblServerEditHostMsgShow_Click);
             // 
             // txtBoxServerEditTransfersUpldQuota
             // 
+            this.txtBoxServerEditTransfersUpldQuota.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditTransfersUpldQuota.Enabled = false;
             this.txtBoxServerEditTransfersUpldQuota.Location = new System.Drawing.Point(773, 235);
             this.txtBoxServerEditTransfersUpldQuota.Name = "txtBoxServerEditTransfersUpldQuota";
             this.txtBoxServerEditTransfersUpldQuota.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditTransfersUpldQuota.TabIndex = 44;
+            this.txtBoxServerEditTransfersUpldQuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAntiFloodPtsTickReduce
             // 
+            this.txtBoxServerEditAntiFloodPtsTickReduce.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAntiFloodPtsTickReduce.Enabled = false;
             this.txtBoxServerEditAntiFloodPtsTickReduce.Location = new System.Drawing.Point(773, 50);
             this.txtBoxServerEditAntiFloodPtsTickReduce.Name = "txtBoxServerEditAntiFloodPtsTickReduce";
             this.txtBoxServerEditAntiFloodPtsTickReduce.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAntiFloodPtsTickReduce.TabIndex = 43;
+            this.txtBoxServerEditAntiFloodPtsTickReduce.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAutoBanRemoveTime
             // 
+            this.txtBoxServerEditAutoBanRemoveTime.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAutoBanRemoveTime.Enabled = false;
             this.txtBoxServerEditAutoBanRemoveTime.Location = new System.Drawing.Point(456, 365);
             this.txtBoxServerEditAutoBanRemoveTime.Name = "txtBoxServerEditAutoBanRemoveTime";
             this.txtBoxServerEditAutoBanRemoveTime.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAutoBanRemoveTime.TabIndex = 42;
+            this.txtBoxServerEditAutoBanRemoveTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAutoBanTime
             // 
+            this.txtBoxServerEditAutoBanTime.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAutoBanTime.Enabled = false;
             this.txtBoxServerEditAutoBanTime.Location = new System.Drawing.Point(456, 339);
             this.txtBoxServerEditAutoBanTime.Name = "txtBoxServerEditAutoBanTime";
             this.txtBoxServerEditAutoBanTime.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAutoBanTime.TabIndex = 41;
+            this.txtBoxServerEditAutoBanTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAutoBanCount
             // 
+            this.txtBoxServerEditAutoBanCount.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAutoBanCount.Enabled = false;
             this.txtBoxServerEditAutoBanCount.Location = new System.Drawing.Point(456, 313);
             this.txtBoxServerEditAutoBanCount.Name = "txtBoxServerEditAutoBanCount";
             this.txtBoxServerEditAutoBanCount.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAutoBanCount.TabIndex = 40;
+            this.txtBoxServerEditAutoBanCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostBtnUrl
             // 
+            this.txtBoxServerEditHostBtnUrl.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostBtnUrl.Enabled = false;
             this.txtBoxServerEditHostBtnUrl.Location = new System.Drawing.Point(456, 261);
             this.txtBoxServerEditHostBtnUrl.Name = "txtBoxServerEditHostBtnUrl";
             this.txtBoxServerEditHostBtnUrl.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditHostBtnUrl.TabIndex = 39;
+            this.txtBoxServerEditHostBtnUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostBtnTooltip
             // 
+            this.txtBoxServerEditHostBtnTooltip.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostBtnTooltip.Enabled = false;
             this.txtBoxServerEditHostBtnTooltip.Location = new System.Drawing.Point(456, 235);
             this.txtBoxServerEditHostBtnTooltip.Name = "txtBoxServerEditHostBtnTooltip";
             this.txtBoxServerEditHostBtnTooltip.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditHostBtnTooltip.TabIndex = 38;
+            this.txtBoxServerEditHostBtnTooltip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostBnrInter
             // 
+            this.txtBoxServerEditHostBnrInter.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostBnrInter.Enabled = false;
             this.txtBoxServerEditHostBnrInter.Location = new System.Drawing.Point(456, 209);
             this.txtBoxServerEditHostBnrInter.Name = "txtBoxServerEditHostBnrInter";
             this.txtBoxServerEditHostBnrInter.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditHostBnrInter.TabIndex = 37;
+            this.txtBoxServerEditHostBnrInter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostBnrUrl
             // 
+            this.txtBoxServerEditHostBnrUrl.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostBnrUrl.Enabled = false;
             this.txtBoxServerEditHostBnrUrl.Location = new System.Drawing.Point(456, 183);
             this.txtBoxServerEditHostBnrUrl.Name = "txtBoxServerEditHostBnrUrl";
             this.txtBoxServerEditHostBnrUrl.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditHostBnrUrl.TabIndex = 36;
+            this.txtBoxServerEditHostBnrUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostUrl
             // 
+            this.txtBoxServerEditHostUrl.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostUrl.Enabled = false;
             this.txtBoxServerEditHostUrl.Location = new System.Drawing.Point(456, 157);
             this.txtBoxServerEditHostUrl.Name = "txtBoxServerEditHostUrl";
             this.txtBoxServerEditHostUrl.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditHostUrl.TabIndex = 35;
+            this.txtBoxServerEditHostUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAntiFloodPtsBanTime
             // 
+            this.txtBoxServerEditAntiFloodPtsBanTime.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAntiFloodPtsBanTime.Enabled = false;
             this.txtBoxServerEditAntiFloodPtsBanTime.Location = new System.Drawing.Point(773, 154);
             this.txtBoxServerEditAntiFloodPtsBanTime.Name = "txtBoxServerEditAntiFloodPtsBanTime";
             this.txtBoxServerEditAntiFloodPtsBanTime.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAntiFloodPtsBanTime.TabIndex = 34;
+            this.txtBoxServerEditAntiFloodPtsBanTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAntiFloodPtsNeededBan
             // 
+            this.txtBoxServerEditAntiFloodPtsNeededBan.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAntiFloodPtsNeededBan.Enabled = false;
             this.txtBoxServerEditAntiFloodPtsNeededBan.Location = new System.Drawing.Point(773, 128);
             this.txtBoxServerEditAntiFloodPtsNeededBan.Name = "txtBoxServerEditAntiFloodPtsNeededBan";
             this.txtBoxServerEditAntiFloodPtsNeededBan.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAntiFloodPtsNeededBan.TabIndex = 33;
+            this.txtBoxServerEditAntiFloodPtsNeededBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAntiFloodPtsNeededKick
             // 
+            this.txtBoxServerEditAntiFloodPtsNeededKick.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAntiFloodPtsNeededKick.Enabled = false;
             this.txtBoxServerEditAntiFloodPtsNeededKick.Location = new System.Drawing.Point(773, 102);
             this.txtBoxServerEditAntiFloodPtsNeededKick.Name = "txtBoxServerEditAntiFloodPtsNeededKick";
             this.txtBoxServerEditAntiFloodPtsNeededKick.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAntiFloodPtsNeededKick.TabIndex = 32;
+            this.txtBoxServerEditAntiFloodPtsNeededKick.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditAntiFloodPtsNeededWarn
             // 
+            this.txtBoxServerEditAntiFloodPtsNeededWarn.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditAntiFloodPtsNeededWarn.Enabled = false;
             this.txtBoxServerEditAntiFloodPtsNeededWarn.Location = new System.Drawing.Point(773, 76);
             this.txtBoxServerEditAntiFloodPtsNeededWarn.Name = "txtBoxServerEditAntiFloodPtsNeededWarn";
             this.txtBoxServerEditAntiFloodPtsNeededWarn.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditAntiFloodPtsNeededWarn.TabIndex = 31;
+            this.txtBoxServerEditAntiFloodPtsNeededWarn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditTransfersDownldQuota
             // 
+            this.txtBoxServerEditTransfersDownldQuota.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditTransfersDownldQuota.Enabled = false;
             this.txtBoxServerEditTransfersDownldQuota.Location = new System.Drawing.Point(773, 287);
             this.txtBoxServerEditTransfersDownldQuota.Name = "txtBoxServerEditTransfersDownldQuota";
             this.txtBoxServerEditTransfersDownldQuota.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditTransfersDownldQuota.TabIndex = 30;
+            this.txtBoxServerEditTransfersDownldQuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditTransfersDownldBandwthLimit
             // 
+            this.txtBoxServerEditTransfersDownldBandwthLimit.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditTransfersDownldBandwthLimit.Enabled = false;
             this.txtBoxServerEditTransfersDownldBandwthLimit.Location = new System.Drawing.Point(773, 261);
             this.txtBoxServerEditTransfersDownldBandwthLimit.Name = "txtBoxServerEditTransfersDownldBandwthLimit";
             this.txtBoxServerEditTransfersDownldBandwthLimit.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditTransfersDownldBandwthLimit.TabIndex = 29;
+            this.txtBoxServerEditTransfersDownldBandwthLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditTransfersUpldBandwthLimit
             // 
+            this.txtBoxServerEditTransfersUpldBandwthLimit.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditTransfersUpldBandwthLimit.Enabled = false;
             this.txtBoxServerEditTransfersUpldBandwthLimit.Location = new System.Drawing.Point(773, 209);
             this.txtBoxServerEditTransfersUpldBandwthLimit.Name = "txtBoxServerEditTransfersUpldBandwthLimit";
             this.txtBoxServerEditTransfersUpldBandwthLimit.Size = new System.Drawing.Size(139, 20);
             this.txtBoxServerEditTransfersUpldBandwthLimit.TabIndex = 28;
+            this.txtBoxServerEditTransfersUpldBandwthLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServerEditHostMessage
             // 
+            this.txtBoxServerEditHostMessage.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditHostMessage.Location = new System.Drawing.Point(456, 50);
             this.txtBoxServerEditHostMessage.Name = "txtBoxServerEditHostMessage";
             this.txtBoxServerEditHostMessage.Size = new System.Drawing.Size(139, 20);
@@ -1156,6 +1386,7 @@
             // 
             // txtBoxServerEditStdGrpsDefChnlAdminGrp
             // 
+            this.txtBoxServerEditStdGrpsDefChnlAdminGrp.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditStdGrpsDefChnlAdminGrp.Location = new System.Drawing.Point(169, 339);
             this.txtBoxServerEditStdGrpsDefChnlAdminGrp.Name = "txtBoxServerEditStdGrpsDefChnlAdminGrp";
             this.txtBoxServerEditStdGrpsDefChnlAdminGrp.Size = new System.Drawing.Size(134, 20);
@@ -1164,6 +1395,7 @@
             // 
             // txtBoxServerEditStdGrpsDefChnlGrp
             // 
+            this.txtBoxServerEditStdGrpsDefChnlGrp.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditStdGrpsDefChnlGrp.Location = new System.Drawing.Point(169, 313);
             this.txtBoxServerEditStdGrpsDefChnlGrp.Name = "txtBoxServerEditStdGrpsDefChnlGrp";
             this.txtBoxServerEditStdGrpsDefChnlGrp.Size = new System.Drawing.Size(134, 20);
@@ -1172,6 +1404,7 @@
             // 
             // txtBoxServerEditStdGrpsDefServGrp
             // 
+            this.txtBoxServerEditStdGrpsDefServGrp.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditStdGrpsDefServGrp.Location = new System.Drawing.Point(169, 287);
             this.txtBoxServerEditStdGrpsDefServGrp.Name = "txtBoxServerEditStdGrpsDefServGrp";
             this.txtBoxServerEditStdGrpsDefServGrp.Size = new System.Drawing.Size(134, 20);
@@ -1180,6 +1413,7 @@
             // 
             // txtBoxServerEditVirtServIconID
             // 
+            this.txtBoxServerEditVirtServIconID.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServIconID.Location = new System.Drawing.Point(169, 242);
             this.txtBoxServerEditVirtServIconID.Name = "txtBoxServerEditVirtServIconID";
             this.txtBoxServerEditVirtServIconID.Size = new System.Drawing.Size(134, 20);
@@ -1188,6 +1422,7 @@
             // 
             // txtBoxServerEditVirtServMinNbClInChnlToFrceSilce
             // 
+            this.txtBoxServerEditVirtServMinNbClInChnlToFrceSilce.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServMinNbClInChnlToFrceSilce.Location = new System.Drawing.Point(169, 210);
             this.txtBoxServerEditVirtServMinNbClInChnlToFrceSilce.Name = "txtBoxServerEditVirtServMinNbClInChnlToFrceSilce";
             this.txtBoxServerEditVirtServMinNbClInChnlToFrceSilce.Size = new System.Drawing.Size(134, 20);
@@ -1196,6 +1431,7 @@
             // 
             // txtBoxServerEditVirtServIdentSecuLvl
             // 
+            this.txtBoxServerEditVirtServIdentSecuLvl.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServIdentSecuLvl.Location = new System.Drawing.Point(169, 180);
             this.txtBoxServerEditVirtServIdentSecuLvl.Name = "txtBoxServerEditVirtServIdentSecuLvl";
             this.txtBoxServerEditVirtServIdentSecuLvl.Size = new System.Drawing.Size(134, 20);
@@ -1204,6 +1440,7 @@
             // 
             // txtBoxServerEditVirtServMaxClient
             // 
+            this.txtBoxServerEditVirtServMaxClient.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServMaxClient.Location = new System.Drawing.Point(169, 154);
             this.txtBoxServerEditVirtServMaxClient.Name = "txtBoxServerEditVirtServMaxClient";
             this.txtBoxServerEditVirtServMaxClient.Size = new System.Drawing.Size(134, 20);
@@ -1212,6 +1449,7 @@
             // 
             // txtBoxServerEditVirtServWelcMsg
             // 
+            this.txtBoxServerEditVirtServWelcMsg.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServWelcMsg.Location = new System.Drawing.Point(169, 128);
             this.txtBoxServerEditVirtServWelcMsg.Name = "txtBoxServerEditVirtServWelcMsg";
             this.txtBoxServerEditVirtServWelcMsg.Size = new System.Drawing.Size(134, 20);
@@ -1220,6 +1458,7 @@
             // 
             // txtBoxServerEditVirtServName
             // 
+            this.txtBoxServerEditVirtServName.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServName.Location = new System.Drawing.Point(169, 102);
             this.txtBoxServerEditVirtServName.Name = "txtBoxServerEditVirtServName";
             this.txtBoxServerEditVirtServName.Size = new System.Drawing.Size(134, 20);
@@ -1229,95 +1468,123 @@
             // lblServerEditHostMsg
             // 
             this.lblServerEditHostMsg.AutoSize = true;
+            this.lblServerEditHostMsg.BackColor = System.Drawing.Color.DarkRed;
+            this.lblServerEditHostMsg.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditHostMsg.Location = new System.Drawing.Point(325, 53);
             this.lblServerEditHostMsg.Name = "lblServerEditHostMsg";
             this.lblServerEditHostMsg.Size = new System.Drawing.Size(80, 13);
             this.lblServerEditHostMsg.TabIndex = 17;
             this.lblServerEditHostMsg.Text = "Host message :";
+            this.lblServerEditHostMsg.Click += new System.EventHandler(this.lblServerEditHostMsg_Click);
             // 
             // lblServerEditStdGrpsDefAdminGrp
             // 
             this.lblServerEditStdGrpsDefAdminGrp.AutoSize = true;
+            this.lblServerEditStdGrpsDefAdminGrp.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditStdGrpsDefAdminGrp.Location = new System.Drawing.Point(11, 346);
             this.lblServerEditStdGrpsDefAdminGrp.Name = "lblServerEditStdGrpsDefAdminGrp";
             this.lblServerEditStdGrpsDefAdminGrp.Size = new System.Drawing.Size(116, 13);
             this.lblServerEditStdGrpsDefAdminGrp.TabIndex = 16;
             this.lblServerEditStdGrpsDefAdminGrp.Text = "Channel Admin Group :";
+            this.lblServerEditStdGrpsDefAdminGrp.Click += new System.EventHandler(this.lblServerEditStdGrpsDefAdminGrp_Click);
             // 
             // lblServerEditStdGrpsDefChnlGrp
             // 
             this.lblServerEditStdGrpsDefChnlGrp.AutoSize = true;
+            this.lblServerEditStdGrpsDefChnlGrp.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditStdGrpsDefChnlGrp.Location = new System.Drawing.Point(11, 320);
             this.lblServerEditStdGrpsDefChnlGrp.Name = "lblServerEditStdGrpsDefChnlGrp";
             this.lblServerEditStdGrpsDefChnlGrp.Size = new System.Drawing.Size(84, 13);
             this.lblServerEditStdGrpsDefChnlGrp.TabIndex = 15;
             this.lblServerEditStdGrpsDefChnlGrp.Text = "Channel Group :";
+            this.lblServerEditStdGrpsDefChnlGrp.Click += new System.EventHandler(this.lblServerEditStdGrpsDefChnlGrp_Click);
             // 
             // lblServerEditStdGrpsDefServGrp
             // 
             this.lblServerEditStdGrpsDefServGrp.AutoSize = true;
+            this.lblServerEditStdGrpsDefServGrp.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditStdGrpsDefServGrp.Location = new System.Drawing.Point(11, 294);
             this.lblServerEditStdGrpsDefServGrp.Name = "lblServerEditStdGrpsDefServGrp";
             this.lblServerEditStdGrpsDefServGrp.Size = new System.Drawing.Size(76, 13);
             this.lblServerEditStdGrpsDefServGrp.TabIndex = 14;
             this.lblServerEditStdGrpsDefServGrp.Text = "Server Group :";
+            this.lblServerEditStdGrpsDefServGrp.Click += new System.EventHandler(this.lblServerEditStdGrpsDefServGrp_Click);
             // 
             // lblServerEditVirtServIconID
             // 
             this.lblServerEditVirtServIconID.AutoSize = true;
+            this.lblServerEditVirtServIconID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServIconID.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServIconID.Location = new System.Drawing.Point(8, 245);
             this.lblServerEditVirtServIconID.Name = "lblServerEditVirtServIconID";
             this.lblServerEditVirtServIconID.Size = new System.Drawing.Size(48, 13);
             this.lblServerEditVirtServIconID.TabIndex = 13;
             this.lblServerEditVirtServIconID.Text = "Icon ID :";
+            this.lblServerEditVirtServIconID.Click += new System.EventHandler(this.lblServerEditVirtServIconID_Click);
             // 
             // lblServerEditVirtServMinNbClInChnlToFrceSlce
             // 
+            this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServMinNbClInChnlToFrceSlce.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Location = new System.Drawing.Point(8, 207);
             this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Name = "lblServerEditVirtServMinNbClInChnlToFrceSlce";
             this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Size = new System.Drawing.Size(151, 30);
             this.lblServerEditVirtServMinNbClInChnlToFrceSlce.TabIndex = 12;
             this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Text = "Min. number of clients in the channel to force for silence :";
+            this.lblServerEditVirtServMinNbClInChnlToFrceSlce.Click += new System.EventHandler(this.lblServerEditVirtServMinNbClInChnlToFrceSlce_Click);
             // 
             // lblServerEditVirtServIdentSecuLvl
             // 
             this.lblServerEditVirtServIdentSecuLvl.AutoSize = true;
+            this.lblServerEditVirtServIdentSecuLvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServIdentSecuLvl.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServIdentSecuLvl.Location = new System.Drawing.Point(8, 183);
             this.lblServerEditVirtServIdentSecuLvl.Name = "lblServerEditVirtServIdentSecuLvl";
             this.lblServerEditVirtServIdentSecuLvl.Size = new System.Drawing.Size(117, 13);
             this.lblServerEditVirtServIdentSecuLvl.TabIndex = 11;
             this.lblServerEditVirtServIdentSecuLvl.Text = "Identity Security Level :";
+            this.lblServerEditVirtServIdentSecuLvl.Click += new System.EventHandler(this.lblServerEditVirtServIdentSecuLvl_Click);
             // 
             // lblServerEditVirtServMaxClient
             // 
             this.lblServerEditVirtServMaxClient.AutoSize = true;
+            this.lblServerEditVirtServMaxClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServMaxClient.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServMaxClient.Location = new System.Drawing.Point(8, 157);
             this.lblServerEditVirtServMaxClient.Name = "lblServerEditVirtServMaxClient";
             this.lblServerEditVirtServMaxClient.Size = new System.Drawing.Size(65, 13);
             this.lblServerEditVirtServMaxClient.TabIndex = 10;
             this.lblServerEditVirtServMaxClient.Text = "Max. Client :";
+            this.lblServerEditVirtServMaxClient.Click += new System.EventHandler(this.lblServerEditVirtServMaxClient_Click);
             // 
             // lblServerEditVirtServWelcMsg
             // 
             this.lblServerEditVirtServWelcMsg.AutoSize = true;
+            this.lblServerEditVirtServWelcMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServWelcMsg.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServWelcMsg.Location = new System.Drawing.Point(8, 131);
             this.lblServerEditVirtServWelcMsg.Name = "lblServerEditVirtServWelcMsg";
             this.lblServerEditVirtServWelcMsg.Size = new System.Drawing.Size(104, 13);
             this.lblServerEditVirtServWelcMsg.TabIndex = 9;
             this.lblServerEditVirtServWelcMsg.Text = "Welcome Message :";
+            this.lblServerEditVirtServWelcMsg.Click += new System.EventHandler(this.lblServerEditVirtServWelcMsg_Click);
             // 
             // lblServerEditVirtServName
             // 
             this.lblServerEditVirtServName.AutoSize = true;
+            this.lblServerEditVirtServName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServName.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServName.Location = new System.Drawing.Point(8, 105);
             this.lblServerEditVirtServName.Name = "lblServerEditVirtServName";
             this.lblServerEditVirtServName.Size = new System.Drawing.Size(41, 13);
             this.lblServerEditVirtServName.TabIndex = 8;
             this.lblServerEditVirtServName.Text = "Name :";
+            this.lblServerEditVirtServName.Click += new System.EventHandler(this.lblServerEditVirtServName_Click);
             // 
             // btnServerEditApply
             // 
             this.btnServerEditApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServerEditApply.ForeColor = System.Drawing.Color.Gold;
             this.btnServerEditApply.Location = new System.Drawing.Point(8, 437);
             this.btnServerEditApply.Name = "btnServerEditApply";
             this.btnServerEditApply.Size = new System.Drawing.Size(110, 23);
@@ -1328,6 +1595,7 @@
             // 
             // txtBoxServerEditVirtServMinClVer
             // 
+            this.txtBoxServerEditVirtServMinClVer.BackColor = System.Drawing.Color.Firebrick;
             this.txtBoxServerEditVirtServMinClVer.Location = new System.Drawing.Point(169, 76);
             this.txtBoxServerEditVirtServMinClVer.Name = "txtBoxServerEditVirtServMinClVer";
             this.txtBoxServerEditVirtServMinClVer.Size = new System.Drawing.Size(134, 20);
@@ -1337,37 +1605,46 @@
             // lblServerEditVirtServMinClVer
             // 
             this.lblServerEditVirtServMinClVer.AutoSize = true;
+            this.lblServerEditVirtServMinClVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServMinClVer.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServMinClVer.Location = new System.Drawing.Point(8, 74);
             this.lblServerEditVirtServMinClVer.Name = "lblServerEditVirtServMinClVer";
             this.lblServerEditVirtServMinClVer.Size = new System.Drawing.Size(100, 13);
             this.lblServerEditVirtServMinClVer.TabIndex = 5;
             this.lblServerEditVirtServMinClVer.Text = "Min. Client Version :";
+            this.lblServerEditVirtServMinClVer.Click += new System.EventHandler(this.lblServerEditVirtServMinClVer_Click);
             // 
-            // txtBoxServerVirtServEditPort
+            // txtBoxServerEditVirtServEditPort
             // 
-            this.txtBoxServerVirtServEditPort.Location = new System.Drawing.Point(169, 50);
-            this.txtBoxServerVirtServEditPort.Name = "txtBoxServerVirtServEditPort";
-            this.txtBoxServerVirtServEditPort.Size = new System.Drawing.Size(134, 20);
-            this.txtBoxServerVirtServEditPort.TabIndex = 4;
-            this.txtBoxServerVirtServEditPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxServerEditVirtServEditPort.BackColor = System.Drawing.Color.Firebrick;
+            this.txtBoxServerEditVirtServEditPort.Location = new System.Drawing.Point(169, 50);
+            this.txtBoxServerEditVirtServEditPort.Name = "txtBoxServerEditVirtServEditPort";
+            this.txtBoxServerEditVirtServEditPort.Size = new System.Drawing.Size(134, 20);
+            this.txtBoxServerEditVirtServEditPort.TabIndex = 4;
+            this.txtBoxServerEditVirtServEditPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblServerEditVirtServPort
             // 
             this.lblServerEditVirtServPort.AutoSize = true;
+            this.lblServerEditVirtServPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServerEditVirtServPort.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditVirtServPort.Location = new System.Drawing.Point(8, 53);
             this.lblServerEditVirtServPort.Name = "lblServerEditVirtServPort";
             this.lblServerEditVirtServPort.Size = new System.Drawing.Size(32, 13);
             this.lblServerEditVirtServPort.TabIndex = 3;
             this.lblServerEditVirtServPort.Text = "Port :";
+            this.lblServerEditVirtServPort.Click += new System.EventHandler(this.lblServerEditVirtServPort_Click);
             // 
             // lblServerEditAutoStart
             // 
             this.lblServerEditAutoStart.AutoSize = true;
+            this.lblServerEditAutoStart.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblServerEditAutoStart.Location = new System.Drawing.Point(619, 368);
             this.lblServerEditAutoStart.Name = "lblServerEditAutoStart";
             this.lblServerEditAutoStart.Size = new System.Drawing.Size(128, 13);
             this.lblServerEditAutoStart.TabIndex = 2;
             this.lblServerEditAutoStart.Text = "AutoStart (True or False) :";
+            this.lblServerEditAutoStart.Click += new System.EventHandler(this.lblServerEditAutoStart_Click);
             // 
             // tabPage3
             // 
@@ -1378,32 +1655,211 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Server Creation";
             // 
-            // tabPage4
+            // lstBoxAboutCopyrights
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.tabPage4.Controls.Add(this.lblVersion);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(985, 479);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "About";
+            this.lstBoxAboutCopyrights.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lstBoxAboutCopyrights.Controls.Add(this.lblAboutVersion);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lblAboutCopyrights);
+            this.lstBoxAboutCopyrights.Controls.Add(this.listBox1);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lstBoxAboutThx);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lblAboutThx);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lblAboutChangelog);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lstBoxAboutChangelog);
+            this.lstBoxAboutCopyrights.Controls.Add(this.lblAboutVersionTitle);
+            this.lstBoxAboutCopyrights.Location = new System.Drawing.Point(4, 22);
+            this.lstBoxAboutCopyrights.Name = "lstBoxAboutCopyrights";
+            this.lstBoxAboutCopyrights.Size = new System.Drawing.Size(985, 479);
+            this.lstBoxAboutCopyrights.TabIndex = 3;
+            this.lstBoxAboutCopyrights.Text = "About";
             // 
-            // lblVersion
+            // lblAboutChangelog
             // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(8, 64);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(51, 13);
-            this.lblVersion.TabIndex = 0;
-            this.lblVersion.Text = "Version : ";
+            this.lblAboutChangelog.AutoSize = true;
+            this.lblAboutChangelog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAboutChangelog.Location = new System.Drawing.Point(8, 54);
+            this.lblAboutChangelog.Name = "lblAboutChangelog";
+            this.lblAboutChangelog.Size = new System.Drawing.Size(75, 13);
+            this.lblAboutChangelog.TabIndex = 3;
+            this.lblAboutChangelog.Text = "Changelog :";
             // 
-            // txtBoxServerEditAutoStart
+            // lstBoxAboutChangelog
             // 
-            this.txtBoxServerEditAutoStart.Enabled = false;
-            this.txtBoxServerEditAutoStart.Location = new System.Drawing.Point(773, 365);
-            this.txtBoxServerEditAutoStart.Name = "txtBoxServerEditAutoStart";
-            this.txtBoxServerEditAutoStart.Size = new System.Drawing.Size(139, 20);
-            this.txtBoxServerEditAutoStart.TabIndex = 78;
+            this.lstBoxAboutChangelog.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lstBoxAboutChangelog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBoxAboutChangelog.FormattingEnabled = true;
+            this.lstBoxAboutChangelog.Items.AddRange(new object[] {
+            "Version Beta 0.0.1.26",
+            "==================",
+            "+ Added some error handling",
+            "° Design changes",
+            "- Corrected a bug that would not show the server error response if using another " +
+                "login than \"serveradmin\"",
+            "+ Added the possibility to connect with a none \"serveradmin\" account. Another met" +
+                "hode is then used and a new button was added.",
+            "+ Added the possibility to choose which edition field you want to edit and apply." +
+                " This will help people that are logged with none \"serveradmin\" accounts to disab" +
+                "le",
+            "    the field where they don\'t have enough permission to edit.",
+            "+ Added an error message that will tell if the user has not enough permission pow" +
+                "er and will give the permission ID",
+            "° Better UI Handling",
+            "- Other minor bugs corrections",
+            "+ Added a Permission List Tab.",
+            "    This tab contain a web browser and will display the permission list. This wil" +
+                "l help you to find a permission ID and have the",
+            "    corresponding name and description.",
+            "° Completed the About Tab.",
+            "",
+            "Version Beta 0.0.1.25",
+            "==================",
+            "- Disabled the Server Password Hash showing in the New Password Edition TextBox. " +
+                "This was not intended.",
+            "+ A Message will alert the user that if the Server Name is empty, then the Server" +
+                " Name will not be changed",
+            "",
+            "Version Beta 0.0.1.24",
+            "==================",
+            "° All the Code is now cleaned and commented (maybe to much :P)",
+            "° The Server Edition Tab is now fully working",
+            "- Minor Bug Correction"});
+            this.lstBoxAboutChangelog.Location = new System.Drawing.Point(11, 81);
+            this.lstBoxAboutChangelog.Name = "lstBoxAboutChangelog";
+            this.lstBoxAboutChangelog.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstBoxAboutChangelog.Size = new System.Drawing.Size(956, 169);
+            this.lstBoxAboutChangelog.TabIndex = 2;
+            // 
+            // lblAboutVersionTitle
+            // 
+            this.lblAboutVersionTitle.AutoSize = true;
+            this.lblAboutVersionTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAboutVersionTitle.Location = new System.Drawing.Point(8, 25);
+            this.lblAboutVersionTitle.Name = "lblAboutVersionTitle";
+            this.lblAboutVersionTitle.Size = new System.Drawing.Size(57, 13);
+            this.lblAboutVersionTitle.TabIndex = 0;
+            this.lblAboutVersionTitle.Text = "Version :";
+            // 
+            // lblAboutThx
+            // 
+            this.lblAboutThx.AutoSize = true;
+            this.lblAboutThx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAboutThx.Location = new System.Drawing.Point(8, 274);
+            this.lblAboutThx.Name = "lblAboutThx";
+            this.lblAboutThx.Size = new System.Drawing.Size(57, 13);
+            this.lblAboutThx.TabIndex = 7;
+            this.lblAboutThx.Text = "Thanks :";
+            // 
+            // lstBoxAboutThx
+            // 
+            this.lstBoxAboutThx.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.lstBoxAboutThx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBoxAboutThx.FormattingEnabled = true;
+            this.lstBoxAboutThx.Items.AddRange(new object[] {
+            "- Scordo for his excellent Teamspeak 3 .NET Query Library and his help",
+            "- Stefan1200 for his help",
+            "- Swiss_Sergeant for intern beta testing",
+            "- All the beta testers",
+            "- http://www.france-teamspeak.com for the permission list",
+            "- And of course the Teamspeak Staff for their great work with Teamspeak 3"});
+            this.lstBoxAboutThx.Location = new System.Drawing.Point(11, 298);
+            this.lstBoxAboutThx.Name = "lstBoxAboutThx";
+            this.lstBoxAboutThx.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstBoxAboutThx.Size = new System.Drawing.Size(956, 78);
+            this.lstBoxAboutThx.TabIndex = 8;
+            // 
+            // lblWarningNoServeradmin2
+            // 
+            this.lblWarningNoServeradmin2.AutoSize = true;
+            this.lblWarningNoServeradmin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningNoServeradmin2.ForeColor = System.Drawing.Color.Orange;
+            this.lblWarningNoServeradmin2.Location = new System.Drawing.Point(175, 348);
+            this.lblWarningNoServeradmin2.Name = "lblWarningNoServeradmin2";
+            this.lblWarningNoServeradmin2.Size = new System.Drawing.Size(634, 13);
+            this.lblWarningNoServeradmin2.TabIndex = 24;
+            this.lblWarningNoServeradmin2.Text = "/!\\ Warning /!\\   Then please, complete the form below and use the Connect button" +
+                " under it    /!\\ Warning /!\\";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(328, 6);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(649, 72);
+            this.textBox1.TabIndex = 25;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.Gray;
+            this.tabPage5.Controls.Add(this.label3);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.webBrowser1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(985, 479);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Permission List";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(8, 55);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(969, 416);
+            this.webBrowser1.TabIndex = 10;
+            this.webBrowser1.Url = new System.Uri("http://www.swissteamspeak.com/marc/index.html", System.UriKind.Absolute);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(5, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(365, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "/!\\ You\'ll need an Internet connexion to be able to see this permission list /!\\";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(5, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(697, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "/!\\ This list will allow you to find a permission ID that you could have in an er" +
+                "ror message, and then find the corresponding name and description /!\\";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "- TS3QueryLib.Net : Copyright (c) 2009, Jens Hofmann",
+            "- Teamspeak 3 Administration Tool : Copyright (c) 2010, Marc Dankof"});
+            this.listBox1.Location = new System.Drawing.Point(11, 414);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.listBox1.Size = new System.Drawing.Size(956, 52);
+            this.listBox1.TabIndex = 9;
+            // 
+            // lblAboutCopyrights
+            // 
+            this.lblAboutCopyrights.AutoSize = true;
+            this.lblAboutCopyrights.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAboutCopyrights.Location = new System.Drawing.Point(8, 390);
+            this.lblAboutCopyrights.Name = "lblAboutCopyrights";
+            this.lblAboutCopyrights.Size = new System.Drawing.Size(74, 13);
+            this.lblAboutCopyrights.TabIndex = 10;
+            this.lblAboutCopyrights.Text = "Copyrights :";
+            // 
+            // lblAboutVersion
+            // 
+            this.lblAboutVersion.AutoSize = true;
+            this.lblAboutVersion.Location = new System.Drawing.Point(67, 25);
+            this.lblAboutVersion.Name = "lblAboutVersion";
+            this.lblAboutVersion.Size = new System.Drawing.Size(0, 13);
+            this.lblAboutVersion.TabIndex = 11;
             // 
             // Form1
             // 
@@ -1413,7 +1869,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(993, 505);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1426,8 +1882,10 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.lstBoxAboutCopyrights.ResumeLayout(false);
+            this.lstBoxAboutCopyrights.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1483,7 +1941,7 @@
         private System.Windows.Forms.Button btnServerEditApply;
         private System.Windows.Forms.TextBox txtBoxServerEditVirtServMinClVer;
         private System.Windows.Forms.Label lblServerEditVirtServMinClVer;
-        private System.Windows.Forms.TextBox txtBoxServerVirtServEditPort;
+        private System.Windows.Forms.TextBox txtBoxServerEditVirtServEditPort;
         private System.Windows.Forms.Label lblServerEditVirtServPort;
         private System.Windows.Forms.Label lblServerEditAutoStart;
         private System.Windows.Forms.Label lblServerEditVirtServMinNbClInChnlToFrceSlce;
@@ -1528,8 +1986,8 @@
         private System.Windows.Forms.RadioButton rdBtnServerEditShowModalMsg;
         private System.Windows.Forms.RadioButton rdBtnServerEditNoMessage;
         private System.Windows.Forms.Label lblServerEditHostMsgShow;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.TabPage lstBoxAboutCopyrights;
+        private System.Windows.Forms.Label lblAboutVersionTitle;
         private System.Windows.Forms.Label lblServerEditTransfersDownldBandwthLimit;
         private System.Windows.Forms.Label lblServerEditTransfersDownldQuota;
         private System.Windows.Forms.Label lblServerEditAntiFloodPtsBanTime;
@@ -1557,6 +2015,24 @@
         private System.Windows.Forms.Label lblServerEditServerPassword;
         private System.Windows.Forms.TextBox txtBoxServerEditServerPasswordNewPassword;
         private System.Windows.Forms.TextBox txtBoxServerEditAutoStart;
+        private System.Windows.Forms.Label lblAboutChangelog;
+        private System.Windows.Forms.ListBox lstBoxAboutChangelog;
+        private System.Windows.Forms.Button btnEditServerNoServeradmin;
+        private System.Windows.Forms.Label lblWarningNoServeradmin;
+        private System.Windows.Forms.TextBox txtBoxEditPortNotQuery;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnServerEditApplyNoServeradmin;
+        private System.Windows.Forms.ListBox lstBoxAboutThx;
+        private System.Windows.Forms.Label lblAboutThx;
+        private System.Windows.Forms.Label lblWarningNoServeradmin2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label lblAboutCopyrights;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblAboutVersion;
     }
 }
 
