@@ -1835,6 +1835,11 @@
             this.lstBoxAboutChangelog.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBoxAboutChangelog.FormattingEnabled = true;
             this.lstBoxAboutChangelog.Items.AddRange(new object[] {
+            "Version Beat 0.0.1.31",
+            "==================",
+            "° Minor UI changes",
+            "+Added The missing Changelog",
+            "",
             "Version Beta 0.0.1.29",
             "==================",
             "- Minor bug correction",
