@@ -141,6 +141,10 @@ namespace Ts_Manager_Beta
             rdBtnServerEditShowMsgInLog.Enabled = false;
             // Disable The Server Edit Apply Button
             btnServerEditApply.Enabled = false;
+            // Disable The Apply Button For None "serveradmin" Edition
+            btnServerEditApplyNoServeradmin.Enabled = false;
+            // Hide The Apply Button For None "serveradmin" Edition
+            btnServerEditApplyNoServeradmin.Visible = false;
         }
 
         // On Address/IP TextBox Changes

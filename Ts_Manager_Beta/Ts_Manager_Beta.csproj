@@ -30,11 +30,11 @@
     <ProductName>Ts3 Administration Tool</ProductName>
     <PublisherName>SwissTeamspeak</PublisherName>
     <SuiteName>Teamspeak 3 Administration Tool</SuiteName>
-    <MinimumRequiredVersion>0.0.1.29</MinimumRequiredVersion>
+    <MinimumRequiredVersion>0.0.1.30</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
