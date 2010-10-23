@@ -572,15 +572,43 @@ namespace Ts_Manager_Beta
                                             }
 
                                             // Get The Server Host Url And Put It In The Server Host Url Edit TextBox
-                                            txtBoxServerEditHostUrl.Text = serverinfo.HostBannerUrl.ToString();
+                                            if (serverinfo.HostBannerUrl == null)
+                                            {
+                                                txtBoxServerEditHostUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostUrl.Text = serverinfo.HostBannerUrl.ToString();
+                                            }
                                             // Get The Server Host Banner Url And Put It In The Server Host Banner Url Edit TextBox
-                                            txtBoxServerEditHostBnrUrl.Text = serverinfo.HostBannerGraphicsUrl.ToString();
+                                            if (serverinfo.HostBannerGraphicsUrl == null)
+                                            {
+                                                txtBoxServerEditHostBnrUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBnrUrl.Text = serverinfo.HostBannerGraphicsUrl.ToString();
+                                            }
                                             // Get The Server Host Banner Interval And Put It In The Server Host Banner Interval Edit TextBox
                                             txtBoxServerEditHostBnrInter.Text = serverinfo.HostBannerGraphicsInterval.ToString();
                                             // Get The Server Host Button Tooltop And Put It In The Server Host Button Edit TextBox
-                                            txtBoxServerEditHostBtnTooltip.Text = serverinfo.HostButtonTooltip.ToString();
+                                            if (serverinfo.HostButtonTooltip == null)
+                                            {
+                                                txtBoxServerEditHostBtnTooltip.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBtnTooltip.Text = serverinfo.HostButtonTooltip.ToString();
+                                            }
                                             // Get The Server Host Button Url And Put It In The Server Host Button Url Edit TextBox
-                                            txtBoxServerEditHostBtnUrl.Text = serverinfo.HostButtonUrl.ToString();
+                                            if (serverinfo.HostButtonUrl == null)
+                                            {
+                                                txtBoxServerEditHostBtnUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBtnUrl.Text = serverinfo.HostButtonUrl.ToString();
+                                            }
                                             // Get The Server AutoBan Count And Put It In the Server AutoBan Count Edit TextBox
                                             txtBoxServerEditAutoBanCount.Text = serverinfo.ComplainAutoBanCount.ToString();
                                             // Get The Server AutoBan Time And Put It In The Server AutoBan Time Edit TextBox
@@ -1161,15 +1189,43 @@ namespace Ts_Manager_Beta
                                                 rdBtnServerEditModalMsgAndExit.Checked = true;
                                             }
                                             // Get The Server Host Url And Put It In The Server Host Url Edit TextBox
-                                            txtBoxServerEditHostUrl.Text = serverinfo.HostBannerUrl.ToString();
+                                            if (serverinfo.HostBannerUrl == null)
+                                            {
+                                                txtBoxServerEditHostUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostUrl.Text = serverinfo.HostBannerUrl.ToString();
+                                            }
                                             // Get The Server Host Banner Url And Put It In The Server Host Banner Url Edit TextBox
-                                            txtBoxServerEditHostBnrUrl.Text = serverinfo.HostBannerGraphicsUrl.ToString();
+                                            if (serverinfo.HostBannerGraphicsUrl == null)
+                                            {
+                                                txtBoxServerEditHostBnrUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBnrUrl.Text = serverinfo.HostBannerGraphicsUrl.ToString();
+                                            }
                                             // Get The Server Host Banner Interval And Put It In The Server Host Banner Interval Edit TextBox
                                             txtBoxServerEditHostBnrInter.Text = serverinfo.HostBannerGraphicsInterval.ToString();
                                             // Get The Server Host Button Tooltop And Put It In The Server Host Button Edit TextBox
-                                            txtBoxServerEditHostBtnTooltip.Text = serverinfo.HostButtonTooltip.ToString();
+                                            if (serverinfo.HostButtonTooltip == null)
+                                            {
+                                                txtBoxServerEditHostBtnTooltip.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBtnTooltip.Text = serverinfo.HostButtonTooltip.ToString();
+                                            }
                                             // Get The Server Host Button Url And Put It In The Server Host Button Url Edit TextBox
-                                            txtBoxServerEditHostBtnUrl.Text = serverinfo.HostButtonUrl.ToString();
+                                            if (serverinfo.HostButtonUrl == null)
+                                            {
+                                                txtBoxServerEditHostBtnUrl.Text = "";
+                                            }
+                                            else
+                                            {
+                                                txtBoxServerEditHostBtnUrl.Text = serverinfo.HostButtonUrl.ToString();
+                                            }
                                             // Get The Server AutoBan Count And Put It In the Server AutoBan Count Edit TextBox
                                             txtBoxServerEditAutoBanCount.Text = serverinfo.ComplainAutoBanCount.ToString();
                                             // Get The Server AutoBan Time And Put It In The Server AutoBan Time Edit TextBox
